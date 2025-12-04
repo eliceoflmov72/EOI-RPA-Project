@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MxMSO9VBLE6YaEBPDBDODQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="chatgpt.com" CVScreenId="483b0ae4-acf1-4b16-b679-bd1a6ec6572c" CvElementArea="608, 510, 770, 58" CvType="InputBox" DesignTimeRectangle="662, 512, 622, 56" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='thread-bottom' tag='DIV' /&gt;" Guid="93152a67-d582-4725-95a3-d075004ddcec" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="ba8670e1a31311e762d8785728c06b09.png" xmlns="">0DFLdBo9drkePwdcEUIN94g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
