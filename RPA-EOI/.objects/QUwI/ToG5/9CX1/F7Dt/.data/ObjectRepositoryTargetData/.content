@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="9VyqQ_NS80WdrbpRPU1jYQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="petitchef.es" CVScreenId="268dff91-da3e-4d56-9f10-cddf975ec8ce" CvElementArea="717, 212, 650, 39" CvType="InputBox" DesignTimeRectangle="723, 207, 641, 45" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" Guid="cec288f4-7402-4f78-8d3f-fa98c6bf6194" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Petitchef : Cocina fácil y sabrosa' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="268dff91-da3e-4d56-9f10-cddf975ec8ce" CvElementArea="1367, 218, 33, 32" CvType="Icon" DesignTimeRectangle="1368, 222, 32, 25" FullSelectorArgument="&lt;webctrl parentid='nbs-btn-submit' tag='I' /&gt;" Guid="af47fc9f-d694-45a3-b19a-273a227b5973" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAdCAYAAADCdc79AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKfSURBVFhH1Zfbb0xRFIf9dcSlGiJIwwMRDyLqEhVJhXhBPHgQL4SESOvSa9rRdtppihgE1YumlV4QEqWmKqEaTdfPWnuvQzX7zNn7kMGX7GRmnTn7fGfttS+zDP8Y/7nQ/CxouA6U3Quq3wCqW29b63bQ43PAp9f6w/T4CYnI/dOg62tANctBtSutUNsuUGPFovgKUOc+YHpUbwwnWYg7NxmQBzZvAcZuAQvzenERU0Og3EErdbMcGG/XC2EUF/o8aWUkIzIkLpGlvOiyw3hjLTDRqUF/4oVkmLoOWJmByxr05P0gqGGjafI5hFghGqm3MvdO8JcFjQYw2gq6thrUfTjofrfQ3Awos4PfcBPwcVyDgbAE5Q6Z4cO7fg0m4xZ684BroBx097gGUsKFbbL06KwGknEK0bMa7mgVpz2jkZTMvOJlYTMvBfs1kIxbKH/SZEgy9VvMToFatpmZiq/TGixOvJCM/YdhjaQkEuImn31wCz29YFZfvOzWSEoioY49psh9cBc1147UEA1c0UBKJvt41V4Hun1UA8m4hXiqy5Sn9t28QM5pMBzqu2jWMow0aCQZt5CsIXeO2WGbyGowEN75Ze+j5q1mC/LFLSS87bXplhkS0KFBXih/yq70/Zc06Ee8ECN7mOm0o5ILtKDRBETm4Rl7H++FsieGUFTIdC7nIDlSNFXwupTXCzHI6SBXxUcV/r0cV/7k5voDkRqq5Xoqsw+Suug9bx9U4IOYNC5aylbarIh8T7Vd7fkIEiqVLBQhb99z5OfpcGkTmczOX7MooiLF24evlL9QBGcMhec2A1Jjg1d5AjyJr5VAqXChNARIlUZIGGvzkiqdkBBJNfGfhZiNu7RCgpHiw5/8aXBQeiHh2xc7ORz8HaFYgO9PGrxHv5Fd4QAAAABJRU5ErkJggg==" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="0aa4a7878f1ed5bbfbc38ff0a16da7c8.png" xmlns="">0ulA8BcGFN0Gh7ITEJKtPFQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
