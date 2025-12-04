@@ -67,3 +67,9 @@ publish/
 !*.txt
 !README.md
 !LICENSE
+
+.local/
+.settings/
+.screenshots/
+project.json.user
+*.dll
