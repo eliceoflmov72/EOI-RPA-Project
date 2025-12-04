@@ -1,0 +1,69 @@
+# === UiPath - Archivos y carpetas que NO se deben subir al repositorio ===
+
+# Carpetas generadas automáticamente por UiPath
+.local/
+.project/
+.settings/
+.templates/
+.entities/
+.tmh/
+
+# Base de datos local de actividades (nuget packages locales)
+.packages/
+.nuget/
+
+# Archivos de log y temporales
+*.log
+*.tmp
+*.cache
+
+# Carpetas de compilación Debug/Release
+.settings/Debug/
+.settings/Release/
+
+# Archivos de configuración local del usuario
+*.user
+project.json.user
+
+# Carpetas de backups automáticos de UiPath
+*.backup/
+*.autosave/
+
+# Snapshots y versiones antiguas que genera UiPath Studio
+*.xaml.bak
+*.xaml.old
+
+# Archivo de bloqueo del proyecto
+project.lock.json
+
+# Carpetas de publicación (si publicas a Orchestrator desde Studio)
+Publish/
+publish/
+
+# Si usas GitHub Copilot o UiPath AI Fabric (opcional)
+*.copilot
+
+# === Opcional: si NO quieres subir los paquetes de actividades (recomendado en muchos casos) ===
+# Descomenta las siguientes líneas si prefieres que cada desarrollador descargue sus propios paquetes
+# (así evitas subir cientos de MB de NuGet)
+# /Packages/
+# /packages/
+
+# === Si SÍ quieres subir los paquetes (útil en equipos pequeños o proyectos offline) ===
+# Deja comentadas o elimina las líneas de arriba y usa esto en su lugar:
+!Packages/**/*.nupkg
+!packages/**/*.nupkg
+
+# === Archivos que normalmente SÍ se suben ===
+!project.json
+!*.xaml
+!*.png
+!*.jpg
+!*.jpeg
+!*.xml
+!*.json
+!*.xlsx
+!*.csv
+!*.txt
+!README.md
+!LICENSE
