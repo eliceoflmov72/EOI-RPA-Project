@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="pq5teqsE8kqThZEwrXZ-iA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="recetasgratis.net/busqueda" CVScreenId="3a2c5efe-aa57-4973-8aa7-4f37c2fbabef" CvTextArea="638, 288, 247, 16" CvTextArgument="Receta de Tortilla de zucchini" CvType="Text" DesignTimeRectangle="427, 286, 736, 23" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a' parentclass='resultado link' /&gt;" Guid="ebcae93c-0fb6-4940-a678-86ccd1bcb489" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resultados de tortilla - 875 recetas' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="b73a0be87a7a31a9901789fa946b74e2.png" xmlns="">0K3bhh77EJk-yH1_PSO-pqg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
