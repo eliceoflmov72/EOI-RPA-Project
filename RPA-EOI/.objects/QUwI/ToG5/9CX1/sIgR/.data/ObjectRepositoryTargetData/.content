@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ZinBqvoNvEq5Rb0Kt71Z5A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="recetasgratis.net/busqueda" CVScreenId="350f0261-f4ab-4a52-bc90-daba0b065071" CvTextArea="638, 287, 320, 21" CvTextArgument="Receta de Tortilla de patatas española" CvType="Text" DesignTimeRectangle="427, 286, 736, 23" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Receta de Tortilla de patatas española' tag='A' /&gt;" Guid="39aeb810-f369-4fdb-bf53-a5f1d82de488" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resultados de tortilla de patatas - 2.480 recetas' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="50dede886c437859be8f86e5bb35d3e4.png" xmlns="">08EjDGLYFfkCbpqfEFrStYQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
