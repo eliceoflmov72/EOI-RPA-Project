@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Mercastic, tu comparador de precios de",
+  "Type": "Screen",
+  "Id": "xXyoSlUlC0utewTycyMbbA",
+  "Reference": "olP_1sCdA0ucfGnOEerWrQ/xXyoSlUlC0utewTycyMbbA",
+  "ParentRef": "olP_1sCdA0ucfGnOEerWrQ/_dLvHb-QoEyPo14ijMnbOA",
+  "Created": "2025-12-09T14:51:04.8890537Z",
+  "Updated": "2025-12-09T14:51:04.8890537Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.21.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
