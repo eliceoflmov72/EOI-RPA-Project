@@ -1,15 +1,13 @@
 # =============================================================================
-# GITIGNORE PARA PROYECTOS UIPATH
-# Compatible para todos los desarrolladores y sistemas operativos
+# GITIGNORE OFICIAL UIPATH 2024-2025 (recomendado por la comunidad y UiPath)
+# Incluye el navegador por defecto compartido entre el equipo
 # =============================================================================
 
 # -------------------------------------------
-# Carpetas generadas automáticamente por UiPath Studio
-# (Cada desarrollador las genera localmente)
+# Carpetas locales de UiPath (NO subir nunca)
 # -------------------------------------------
 .local/
 .project/
-.settings/
 .templates/
 .entities/
 .tmh/
@@ -18,7 +16,7 @@
 .screenshots/
 
 # -------------------------------------------
-# Paquetes NuGet (descargados localmente)
+# Paquetes NuGet (se restauran automáticamente)
 # -------------------------------------------
 .packages/
 .nuget/
@@ -26,51 +24,56 @@ packages/
 Packages/
 
 # -------------------------------------------
-# Archivos temporales y de log
+# Configuración local del usuario (excepto el navegador que SÍ queremos compartir)
+# -------------------------------------------
+.settings/**
+!.settings/
+!.settings/Settings/          
+!.settings/Settings/Settings.json
+
+# -------------------------------------------
+# Archivos temporales y logs
 # -------------------------------------------
 *.log
 *.tmp
 *.cache
-
-# -------------------------------------------
-# Archivos de configuración específicos del usuario
-# (Contienen rutas y configuraciones locales)
-# -------------------------------------------
-*.user
-project.json.user
-project.lock.json
-
-# -------------------------------------------
-# Backups y versiones antiguas
-# -------------------------------------------
-*.backup/
-*.autosave/
+*.backup
+*.autosave
 *.xaml.bak
 *.xaml.old
 
 # -------------------------------------------
-# Carpetas de compilación y publicación
+# Backups y carpetas de publicación
 # -------------------------------------------
 Debug/
 Release/
 Publish/
 publish/
+*.nupkg
 
 # -------------------------------------------
-# Archivos compilados y binarios
+# Archivos compilados
 # -------------------------------------------
 *.dll
 *.exe
 *.pdb
 
 # -------------------------------------------
-# Archivos de sistema operativo
+# Archivos específicos de usuario (nunca subir)
+# -------------------------------------------
+*.user
+project.json.user
+project.lock.json
+
+# -------------------------------------------
+# Sistema operativo
 # -------------------------------------------
 # Windows
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+*.lnk
 
 # macOS
 .DS_Store
@@ -82,25 +85,24 @@ $RECYCLE.BIN/
 *~
 
 # -------------------------------------------
-# IDEs y editores
+# Editores e IDEs
 # -------------------------------------------
 .vs/
 .vscode/
+.idea/
 *.suo
 *.sln.docstates
 
 # -------------------------------------------
-# GitHub Copilot / AI Fabric (opcional)
+# Opcional: GitHub Copilot / AI
 # -------------------------------------------
 *.copilot
 
 # =============================================================================
-# NOTA IMPORTANTE:
-# Los siguientes archivos SÍ se suben al repositorio automáticamente:
-#   - project.json (configuración del proyecto)
-#   - *.xaml (flujos de trabajo)
-#   - *.xlsx, *.csv, *.txt (datos de prueba si los necesitas)
-#   - README.md, LICENSE
+# ARCHIVOS QUE SÍ SE SUBEN (importante que no estén ignorados):
+#   - project.json
+#   - *.xaml
+#   - Settings/Settings.json ← ahora sí se sube → navegador compartido
 #   - entry-points.json
-#   - project.uiproj
+#   - assets, data, etc.
 # =============================================================================
