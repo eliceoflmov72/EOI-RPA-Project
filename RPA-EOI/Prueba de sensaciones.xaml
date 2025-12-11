@@ -93,13 +93,13 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Prueba_de_sensaciones" sap:VirtualizedContainerService.HintSize="850,1846.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Prueba_de_sensaciones" sap:VirtualizedContainerService.HintSize="1389,1862" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Busqueda de la receta en la WEB" sap:VirtualizedContainerService.HintSize="486.4,1823.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Busqueda de la receta en la WEB" sap:VirtualizedContainerService.HintSize="488,1839" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="RecetaABuscar" />
         <Variable x:TypeArguments="x:String" Name="RutaBusquedaNavegador" />
@@ -109,12 +109,12 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Cuadro de diálogo de entrada" sap:VirtualizedContainerService.HintSize="452.8,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Introduce receta a buscar" Title="¿Que te apetece comer hoy?" TopMost="False">
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Cuadro de diálogo de entrada" sap:VirtualizedContainerService.HintSize="454,275" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Introduce receta a buscar" Title="¿Que te apetece comer hoy?" TopMost="False">
         <ui:InputDialog.Result>
           <OutArgument x:TypeArguments="x:String">[RecetaABuscar]</OutArgument>
         </ui:InputDialog.Result>
       </ui:InputDialog>
-      <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="452.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="454,175" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[RutaBusquedaNavegador]</OutArgument>
         </Assign.To>
@@ -122,23 +122,29 @@
           <InArgument x:TypeArguments="x:String">[""]</InArgument>
         </Assign.Value>
       </Assign>
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452.8,1292" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="454,1306" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <TryCatch.Try>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Nueva pestaña" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="451.2,696.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="15342c43-f986-490d-bab4-7c9a73bd65df" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Nueva pestaña" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,699" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="15342c43-f986-490d-bab4-7c9a73bd65df" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="449.6,526.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="450,528" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'I'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,301.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" Text="[RecetaABuscar]" Version="V5">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'I'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,302" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" Text="[RecetaABuscar]" Version="V5">
                     <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="chatgpt.com" CVScreenId="483b0ae4-acf1-4b16-b679-bd1a6ec6572c" ContentHash="MxMSO9VBLE6YaEBPDBDODQ" CvElementArea="608, 510, 770, 58" CvType="InputBox" DesignTimeRectangle="662, 512, 622, 56" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='thread-bottom' tag='DIV' /&gt;" Guid="93152a67-d582-4725-95a3-d075004ddcec" InformativeScreenshot="ba8670e1a31311e762d8785728c06b09.png" Reference="olP_1sCdA0ucfGnOEerWrQ/F7Dt71UuLEi4YxsD-hW9sg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="chatgpt.com" CVScreenId="483b0ae4-acf1-4b16-b679-bd1a6ec6572c" ContentHash="AQxcHmemAUuaTjBKUL-3yw" CvElementArea="608, 510, 770, 58" CvType="InputBox" DesignTimeRectangle="660, 111, 175, 34" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='thread-bottom' tag='DIV' /&gt;" Guid="93152a67-d582-4725-95a3-d075004ddcec" InformativeScreenshot="06FejsO8WPk2ElFJ8p4Mshg" Reference="olP_1sCdA0ucfGnOEerWrQ/F7Dt71UuLEi4YxsD-hW9sg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="babb1d19-dc71-4fd9-b1aa-809245796149" CvElementArea="833, 109, 108, 36" CvTextArea="868, 119, 47, 14" CvTextArgument="Buscar" CvType="Button" DesignTimeRectangle="839, 111, 101, 34" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='button search' aaname='  Buscar ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Buscar' /&gt;" Guid="edf4356c-5ed2-4d0e-bf89-d5ea846b5ba5" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                     <uix:NTypeInto.VerifyOptions>
                       <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[RecetaABuscar]" Mode="Appears">
@@ -151,7 +157,7 @@
                       </uix:VerifyExecutionTypeIntoOptions>
                     </uix:NTypeInto.VerifyOptions>
                   </uix:NTypeInto>
-                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Enviar tecla de acceso rápido" sap:VirtualizedContainerService.HintSize="416,160.8" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Enviar tecla de acceso rápido" sap:VirtualizedContainerService.HintSize="416,162" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
                     <ui:SendHotkey.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="396bfdb8-4ca8-4124-977d-a805da8eea74">
                         <ui:Target.TimeoutMS>
@@ -191,25 +197,25 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="451.2,176.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,182" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="417.6,112.8" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Error inesperado: &quot; + exception.Message]" />
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="418,118" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Error inesperado: &quot; + exception.Message]" />
               </Sequence>
             </ActivityAction>
           </Catch>
         </TryCatch.Catches>
         <TryCatch.Finally>
-          <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="451.2,233.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="452,234" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="417.6,169.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Búsqueda por web finalizada.&quot;]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="418,170" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Búsqueda por web finalizada.&quot;]" />
           </Sequence>
         </TryCatch.Finally>
       </TryCatch>

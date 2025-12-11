@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="AQxcHmemAUuaTjBKUL-3yw" Reference="olP_1sCdA0ucfGnOEerWrQ/F7Dt71UuLEi4YxsD-hW9sg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="GE4axCnK6UqPPn7DQUf2Yw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="chatgpt.com" CVScreenId="483b0ae4-acf1-4b16-b679-bd1a6ec6572c" CvElementArea="608, 510, 770, 58" CvType="InputBox" DesignTimeRectangle="660, 111, 175, 34" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='thread-bottom' tag='DIV' /&gt;" Guid="93152a67-d582-4725-95a3-d075004ddcec" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
-      <TargetAnchorable.Anchors>
-        <scg:List x:TypeArguments="ITarget" Capacity="4">
-          <Target CVScreenId="babb1d19-dc71-4fd9-b1aa-809245796149" CvElementArea="833, 109, 108, 36" CvTextArea="868, 119, 47, 14" CvTextArgument="Buscar" CvType="Button" DesignTimeRectangle="839, 111, 101, 34" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='button search' aaname='  Buscar ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Buscar' /&gt;" Guid="edf4356c-5ed2-4d0e-bf89-d5ea846b5ba5" SearchSteps="FuzzySelector, CV" />
-        </scg:List>
-      </TargetAnchorable.Anchors>
-      <imageRef attrName="InformativeScreenshot" originalValue="01c4f2d8a40e57976694b7e11e8f3cf8.png" xmlns="">06FejsO8WPk2ElFJ8p4Mshg</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="recetasgratis.net" CVScreenId="94cc45b2-d8da-4c54-ad73-f9d3bf98220e" CvElementArea="660, 144, 175, 34" CvType="InputBox" DesignTimeRectangle="661, 145, 175, 34" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='q' tag='INPUT' /&gt;" Guid="b3751050-2b49-44d7-a567-638b86025cf3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Recetas de cocina. +20.000 recetas fáciles paso a paso' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="888ffb79a78db3c9d9bfe8a35ab1c73e.png" xmlns="">0fZK8k68GOkqVZmeqid6CZA</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">TypeInto</x:String>
   </ObjectRepositoryTargetData.Data>
