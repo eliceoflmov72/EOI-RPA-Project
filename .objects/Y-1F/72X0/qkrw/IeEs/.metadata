@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Comprobar estado de aplicació ¿ha hecho ya login",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "IeEsKdBwQEmKQm_OGt5mcw",
+  "Reference": "8GzklXuG0EqEGahvZB5wyg/IeEsKdBwQEmKQm_OGt5mcw",
+  "ParentRef": "8GzklXuG0EqEGahvZB5wyg/qkrw3nSZxECcP8G5r5HMTg",
+  "Created": "2025-11-21T16:09:56.0503064Z",
+  "Updated": "2025-11-21T16:09:56.0503064Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Fz1bnHEe7Em5h5V3SuimHQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="petitchef.es/recetas" CVScreenId="367c4602-6b38-4905-9f18-bedefc3db80f" CvElementArea="720, 213, 645, 38" CvType="InputBox" DesignTimeRectangle="723, 207, 641, 45" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" Guid="4d200ee3-43b6-4439-b2e0-1649efe7f71e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Recetas en Petitchef' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="367c4602-6b38-4905-9f18-bedefc3db80f" CvElementArea="1367, 218, 33, 32" CvType="Icon" DesignTimeRectangle="1368, 222, 32, 25" FullSelectorArgument="&lt;webctrl parentid='nbs-btn-submit' tag='I' /&gt;" Guid="7f95c170-2f6e-4bba-9d63-41c80c5cbcf3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAdCAYAAADCdc79AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKfSURBVFhH1Zfbb0xRFIf9dcSlGiJIwwMRDyLqEhVJhXhBPHgQL4SESOvSa9rRdtppihgE1YumlV4QEqWmKqEaTdfPWnuvQzX7zNn7kMGX7GRmnTn7fGfttS+zDP8Y/7nQ/CxouA6U3Quq3wCqW29b63bQ43PAp9f6w/T4CYnI/dOg62tANctBtSutUNsuUGPFovgKUOc+YHpUbwwnWYg7NxmQBzZvAcZuAQvzenERU0Og3EErdbMcGG/XC2EUF/o8aWUkIzIkLpGlvOiyw3hjLTDRqUF/4oVkmLoOWJmByxr05P0gqGGjafI5hFghGqm3MvdO8JcFjQYw2gq6thrUfTjofrfQ3Awos4PfcBPwcVyDgbAE5Q6Z4cO7fg0m4xZ684BroBx097gGUsKFbbL06KwGknEK0bMa7mgVpz2jkZTMvOJlYTMvBfs1kIxbKH/SZEgy9VvMToFatpmZiq/TGixOvJCM/YdhjaQkEuImn31wCz29YFZfvOzWSEoioY49psh9cBc1147UEA1c0UBKJvt41V4Hun1UA8m4hXiqy5Sn9t28QM5pMBzqu2jWMow0aCQZt5CsIXeO2WGbyGowEN75Ze+j5q1mC/LFLSS87bXplhkS0KFBXih/yq70/Zc06Ee8ECN7mOm0o5ILtKDRBETm4Rl7H++FsieGUFTIdC7nIDlSNFXwupTXCzHI6SBXxUcV/r0cV/7k5voDkRqq5Xoqsw+Suug9bx9U4IOYNC5aylbarIh8T7Vd7fkIEiqVLBQhb99z5OfpcGkTmczOX7MooiLF24evlL9QBGcMhec2A1Jjg1d5AjyJr5VAqXChNARIlUZIGGvzkiqdkBBJNfGfhZiNu7RCgpHiw5/8aXBQeiHh2xc7ORz8HaFYgO9PGrxHv5Fd4QAAAABJRU5ErkJggg==" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1c405c503ad279b48ac1c496810c2589.png" xmlns="">0e9fKAAFbP0GVo3_8Q_V8QQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Exit",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "jU2ApTl9OUyYbbDArW6o4A",
+  "Reference": "8GzklXuG0EqEGahvZB5wyg/jU2ApTl9OUyYbbDArW6o4A",
+  "ParentRef": "8GzklXuG0EqEGahvZB5wyg/qkrw3nSZxECcP8G5r5HMTg",
+  "Created": "2025-11-21T16:11:55.3995921Z",
+  "Updated": "2025-11-21T16:11:55.3995921Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Click boton Log In",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "w9XAp-d1w0G3pZA41k6ZFg",
+  "Reference": "8GzklXuG0EqEGahvZB5wyg/w9XAp-d1w0G3pZA41k6ZFg",
+  "ParentRef": "8GzklXuG0EqEGahvZB5wyg/kszd0-OWOUSOVY8YJCGs4g",
+  "Created": "2025-11-25T20:19:11.3724518Z",
+  "Updated": "2025-11-25T20:19:25.8110174Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

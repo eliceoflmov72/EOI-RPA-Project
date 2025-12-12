@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="PefsHelnJkKdYH_qXKUETQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="9bc78df5-161b-42ae-9813-5c35c49fa04e" CvTextArea="28, 48, 31, 15" CvTextArgument="Login" CvType="Text" DesignTimeRectangle="29, 46, 29, 16" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Login' role='text' /&gt;&lt;ctrl name='Login' role='text' /&gt;" Guid="0b4947e8-5da1-4eeb-b1cd-fce2173dcf24" ScopeSelectorArgument="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UiDemo' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f2f207dbc65c304f24a5b85f5286dcc6.png" xmlns="">0KM1kDHLBBk61LfDoJwSXIA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

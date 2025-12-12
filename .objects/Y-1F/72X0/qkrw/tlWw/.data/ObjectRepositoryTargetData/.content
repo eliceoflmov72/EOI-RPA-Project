@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="sJHZTYTWvEybVRdmWAiO0A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="2a8e29bc-9ae9-4689-8a00-02087d6a941d" CvTextArea="270, 43, 86, 27" CvTextArgument="UiPath" CvType="Text" DesignTimeRectangle="270, 41, 86, 36" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl automationid='MainTitle' /&gt;&lt;ctrl name='UiPath' role='text' /&gt;" Guid="8e69689b-4e28-44ab-ac22-bdb2ec778748" ScopeSelectorArgument="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UIDemo' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="2a8e29bc-9ae9-4689-8a00-02087d6a941d" CvTextArea="22, 47, 70, 13" CvTextArgument="11/25/2025" CvType="Text" DesignTimeRectangle="23, 46, 69, 16" ElementType="Text" FuzzySelectorArgument="&lt;ctrl automationid='DateLabel' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' /&gt;&lt;ctrl name='11/25/2025' role='text' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='11/25/2025' /&gt;" Guid="41eb60f5-11cb-4f94-a5d8-7828a8e276e6" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="7a8f8ac5a9a37a57de23e487b892ce5a.png" xmlns="">0r0kbK84st0eKDzXnIxd9MA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

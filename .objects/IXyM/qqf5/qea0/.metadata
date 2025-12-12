@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Calculadora",
+  "Type": "Screen",
+  "Id": "qea0W3gR80q3Zzpg8ht3Rg",
+  "Reference": "8GzklXuG0EqEGahvZB5wyg/qea0W3gR80q3Zzpg8ht3Rg",
+  "ParentRef": "8GzklXuG0EqEGahvZB5wyg/qqf5_ZyRbECTswv2QXpcKQ",
+  "Created": "2025-11-15T11:14:28.9079299Z",
+  "Updated": "2025-11-15T11:14:28.9079299Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

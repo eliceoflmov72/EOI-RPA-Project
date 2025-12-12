@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Paella valenciana",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "78DXp4EPvEGiP7a7DpC0kA",
+  "Reference": "8GzklXuG0EqEGahvZB5wyg/78DXp4EPvEGiP7a7DpC0kA",
+  "ParentRef": "8GzklXuG0EqEGahvZB5wyg/CX3w6Tew90GB8yI-0sfGGw",
+  "Created": "2025-12-02T20:11:33.7216222Z",
+  "Updated": "2025-12-02T20:11:33.7216222Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

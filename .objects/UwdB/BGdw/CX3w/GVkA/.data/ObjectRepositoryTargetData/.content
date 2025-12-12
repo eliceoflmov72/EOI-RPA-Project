@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="hXrMQ1GLb0-0xHtcUeWTjw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="petitchef.es" CVScreenId="31d94614-0d23-420d-a0b7-fe03b4a9e0a6" CvElementArea="1367, 218, 33, 32" CvType="Icon" DesignTimeRectangle="1368, 222, 32, 25" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='nbs-btn-submit' tag='I' /&gt;" Guid="183e19bc-d94b-4279-8169-60bbd595762d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAdCAYAAADCdc79AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKfSURBVFhH1Zfbb0xRFIf9dcSlGiJIwwMRDyLqEhVJhXhBPHgQL4SESOvSa9rRdtppihgE1YumlV4QEqWmKqEaTdfPWnuvQzX7zNn7kMGX7GRmnTn7fGfttS+zDP8Y/7nQ/CxouA6U3Quq3wCqW29b63bQ43PAp9f6w/T4CYnI/dOg62tANctBtSutUNsuUGPFovgKUOc+YHpUbwwnWYg7NxmQBzZvAcZuAQvzenERU0Og3EErdbMcGG/XC2EUF/o8aWUkIzIkLpGlvOiyw3hjLTDRqUF/4oVkmLoOWJmByxr05P0gqGGjafI5hFghGqm3MvdO8JcFjQYw2gq6thrUfTjofrfQ3Awos4PfcBPwcVyDgbAE5Q6Z4cO7fg0m4xZ684BroBx097gGUsKFbbL06KwGknEK0bMa7mgVpz2jkZTMvOJlYTMvBfs1kIxbKH/SZEgy9VvMToFatpmZiq/TGixOvJCM/YdhjaQkEuImn31wCz29YFZfvOzWSEoioY49psh9cBc1147UEA1c0UBKJvt41V4Hun1UA8m4hXiqy5Sn9t28QM5pMBzqu2jWMow0aCQZt5CsIXeO2WGbyGowEN75Ze+j5q1mC/LFLSS87bXplhkS0KFBXih/yq70/Zc06Ee8ECN7mOm0o5ILtKDRBETm4Rl7H++FsieGUFTIdC7nIDlSNFXwupTXCzHI6SBXxUcV/r0cV/7k5voDkRqq5Xoqsw+Suug9bx9U4IOYNC5aylbarIh8T7Vd7fkIEiqVLBQhb99z5OfpcGkTmczOX7MooiLF24evlL9QBGcMhec2A1Jjg1d5AjyJr5VAqXChNARIlUZIGGvzkiqdkBBJNfGfhZiNu7RCgpHiw5/8aXBQeiHh2xc7ORz8HaFYgO9PGrxHv5Fd4QAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Petitchef : Cocina fácil y sabrosa' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="31d94614-0d23-420d-a0b7-fe03b4a9e0a6" CvElementArea="718, 212, 649, 39" CvType="InputBox" DesignTimeRectangle="723, 207, 641, 45" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" Guid="132ebf87-f7d3-4cbd-92f9-64b12b527bde" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e6e372a15be228b56b50e2167ace69ae.png" xmlns="">0wQxzEx8170mizIR2ceiv-Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

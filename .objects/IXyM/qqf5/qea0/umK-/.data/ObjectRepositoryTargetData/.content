@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-GEkrawkfU6CxEF8uU8Agw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="2acf34ef-50f5-4b52-acbb-5319b60023dd" CvElementArea="13, 318, 76, 53" CvTextArea="44, 336, 12, 17" CvTextArgument="7" CvType="Button" DesignTimeRectangle="12, 319, 77, 51" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Teclado numérico' /&gt;&lt;uia automationid='num7Button' cls='Button' name='Siete' /&gt;" Guid="5506af73-62fc-44e7-aa31-6d9a58ab46c2" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculadora' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="e209ce04e5c4c01dfa3479b9d3f24ce6.png" xmlns="">08gyLT2G_20q-vYTqlt6qKg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

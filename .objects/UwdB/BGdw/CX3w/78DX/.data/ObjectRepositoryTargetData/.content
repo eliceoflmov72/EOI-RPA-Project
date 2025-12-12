@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ZSk71jwzIEu7Fo9iS9EzBQ" Reference="8GzklXuG0EqEGahvZB5wyg/78DXp4EPvEGiP7a7DpC0kA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="petitchef.es/index.php" CVScreenId="4ac861d9-dd85-4620-9fcc-9c4755ae85ff" CvTextArea="272, 343, 162, 19" CvTextArgument="Paella valenciana" CvType="Text" DesignTimeRectangle="273, 338, 161, 28" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='page-main' tag='A' /&gt;" Guid="0ed250f6-ce38-4c9b-a2e8-381aa3cace3b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Paella valenciana - 2 recetas - Petitchef' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="4f7e354524814a591d3bcdb00a4ffec1.png" xmlns="">0aXA4y31hYU2qAyIbEWt3hQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

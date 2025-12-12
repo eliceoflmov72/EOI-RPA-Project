@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-Ix_GxtAYkaxxVybOzHI4w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="0aea57bf-2de7-4412-9fc8-d1115fab13f5" CvElementArea="34, 531, 123, 36" CvTextArea="82, 542, 25, 14" CvTextArgument="Exit" CvType="Button" DesignTimeRectangle="35, 532, 120, 34" ElementType="Button" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;ctrl name='Exit' role='push button' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='Exit' /&gt;" Guid="f23c3be7-8e55-402a-ab90-7b30b7f7ef04" ScopeSelectorArgument="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UIDemo' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="0aea57bf-2de7-4412-9fc8-d1115fab13f5" CvElementArea="34, 531, 123, 36" CvTextArea="82, 542, 25, 14" CvTextArgument="Exit" CvType="Button" DesignTimeRectangle="82, 538, 25, 21" ElementType="Text" FuzzySelectorArgument="&lt;ctrl name='Exit' role='push button' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Exit' role='text' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='Exit' /&gt;" Guid="0d6cfee3-f3c2-44b8-b2ec-9be1e9bd50f2" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="f85e30dd7ce3e1df7afb1c89b6a92c66.png" xmlns="">0l7yR_4beN0S1h6ovEU3smA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

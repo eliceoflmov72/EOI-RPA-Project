@@ -1,0 +1,12 @@
+﻿{
+  "Name": "UiDemo",
+  "Type": "App",
+  "Id": "Y-1F0EEpdUqJXCfSuh1vmA",
+  "Reference": "8GzklXuG0EqEGahvZB5wyg/Y-1F0EEpdUqJXCfSuh1vmA",
+  "Created": "2025-11-21T15:50:51.150819Z",
+  "Updated": "2025-11-21T15:50:51.150819Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

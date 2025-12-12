@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Clic acceder al boton de busqueda",
+  "Type": "Element",
+  "Id": "GVkAfHbWxEegRzYaafEoDQ",
+  "Reference": "8GzklXuG0EqEGahvZB5wyg/GVkAfHbWxEegRzYaafEoDQ",
+  "ParentRef": "8GzklXuG0EqEGahvZB5wyg/CX3w6Tew90GB8yI-0sfGGw",
+  "Created": "2025-12-02T19:59:59.1996407Z",
+  "Updated": "2025-12-02T19:59:59.1996407Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

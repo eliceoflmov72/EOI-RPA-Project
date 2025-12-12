@@ -1,0 +1,12 @@
+﻿{
+  "Name": "UiPath",
+  "Type": "App",
+  "Id": "zw-QZ8mHwkibeCeeWX2T6A",
+  "Reference": "8GzklXuG0EqEGahvZB5wyg/zw-QZ8mHwkibeCeeWX2T6A",
+  "Created": "2025-11-25T20:10:44.3553452Z",
+  "Updated": "2025-11-25T20:10:44.3553452Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

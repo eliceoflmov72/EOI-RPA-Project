@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="wEINxLSzLkio0m5-jW_6KA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="petitchef.es/recetas/recetas-de-paella" CVScreenId="a6f42258-0ef8-4b78-b23c-097c14ddb5fb" CvType="AnyWordGroup" DesignTimeRectangle="576, 364, 298, 28" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='page-main' tag='A' /&gt;" Guid="06959697-05b8-4fed-b68a-fb247b9e3eb2" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Recetas de paella - 65 recetas - Petitchef' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="15bcde70e8632c655d55ecbaa68021c8.png" xmlns="">0H1_xnY4uVkS6CH2Dib5HCA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

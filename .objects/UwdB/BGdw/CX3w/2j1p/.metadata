@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Paella mixta de carne y…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "2j1p3dEr1kqjCbsd3EwPVg",
+  "Reference": "8GzklXuG0EqEGahvZB5wyg/2j1p3dEr1kqjCbsd3EwPVg",
+  "ParentRef": "8GzklXuG0EqEGahvZB5wyg/CX3w6Tew90GB8yI-0sfGGw",
+  "Created": "2025-12-04T19:34:15.6907827Z",
+  "Updated": "2025-12-04T19:34:15.6907827Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
