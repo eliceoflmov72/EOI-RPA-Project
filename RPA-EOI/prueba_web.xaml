@@ -59,6 +59,7 @@
       <x:String>UiPath.GSuite.Activities</x:String>
       <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -135,9 +136,10 @@
   <sap:WorkflowViewStateService.ViewState>
     <scg:Dictionary x:TypeArguments="x:String, x:Object">
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="prueba_web" sap:VirtualizedContainerService.HintSize="1069,3983" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="prueba_web" sap:VirtualizedContainerService.HintSize="857,3799" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="respuesta" />
       <Variable x:TypeArguments="x:Boolean" Default="[continuar = True]" Name="continuar" />
@@ -156,15 +158,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleDoWhile CurrentIndex="[index]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="621,3960" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile CurrentIndex="[index]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="621,3776" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="619,3838" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="619,3654" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Busqueda de la receta en la WEB" sap:VirtualizedContainerService.HintSize="585,3181" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Busqueda de la receta en la WEB" sap:VirtualizedContainerService.HintSize="585,2997" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="RutaNavegador" />
               <Variable x:TypeArguments="x:String" Name="RecetaABuscar" />
@@ -187,13 +189,13 @@
                 <InArgument x:TypeArguments="x:String">["https://www.recetasgratis.net/"]</InArgument>
               </Assign.Value>
             </Assign>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Nueva pestaña" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="551,2623" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="15342c43-f986-490d-bab4-7c9a73bd65df" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Nueva pestaña" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="551,2439" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="15342c43-f986-490d-bab4-7c9a73bd65df" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="549,2425" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="549,2241" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="caracteristicasReceta" />
                       <Variable x:TypeArguments="s:String[]" Name="arrayIngredientes" />
@@ -248,7 +250,7 @@
                         <uix:TargetAnchorable BrowserURL="recetasgratis.net/receta-de-sopa-de-hongos-77841.html" ContentHash="hNHPzHJXEkKGCRgyPO3-Hg" DesignTimeRectangle="428, 337, 734, 51" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='properties' parentid='top' tag='DIV' /&gt;" Guid="f4e45b2c-8294-4e15-84ba-7080fded9491" InformativeScreenshot="5a55ff10ca0fe2e981232451639c7045.png" Reference="olP_1sCdA0ucfGnOEerWrQ/j1KhfNQMDUS_cc81OnssUA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sopa de hongos - Receta FÁCIL' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <ui:BuildDataTable DataTable="[dtIngredientes]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="515,96" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Cantidad&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ingrediente&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;" />
+                    <ui:BuildDataTable DataTable="[dtIngredientes]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="515,96" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Cantidad&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Ingrediente&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
                     <Assign sap:VirtualizedContainerService.HintSize="515,179" sap2010:WorkflowViewState.IdRef="Assign_5">
                       <Assign.To>
                         <OutArgument x:TypeArguments="s:String[]">[arrayIngredientes]</OutArgument>
@@ -257,13 +259,13 @@
                         <InArgument x:TypeArguments="s:String[]">[System.Text.RegularExpressions.Regex.Split(ingredientesTexto.Trim, "\r\n|\r|\n").Where(Function(x) Not String.IsNullOrWhiteSpace(x)).Select(Function(x) x.Trim).ToArray()]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[Item]" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="515,1101" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[arrayIngredientes]">
+                    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[Item]" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="515,917" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[arrayIngredientes]">
                       <ui:ForEach.Body>
                         <ActivityAction x:TypeArguments="x:String">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513,975" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513,791" sap2010:WorkflowViewState.IdRef="Sequence_8">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="cantidadStr" />
                               <Variable x:TypeArguments="x:String" Name="lineaLimpia" />
@@ -303,29 +305,7 @@
                                 <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(currentText, "^\s*([\d,./½¼⅓⅔⅕⅖⅗⅘⅙⅚⅐⅛⅜⅝⅞]+|\d+\/\d+)\s*", "").Trim]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,184" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
-                              <ui:MultipleAssign.AssignOperations>
-                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
-                                    <ui:AssignOperation.To>
-                                      <OutArgument x:TypeArguments="x:Object">[dtIngredientes.Rows(dtIngredientes.Rows.Count - 1)("Cantidad")]</OutArgument>
-                                    </ui:AssignOperation.To>
-                                    <ui:AssignOperation.Value>
-                                      <InArgument x:TypeArguments="x:Object">[cantidadStr]</InArgument>
-                                    </ui:AssignOperation.Value>
-                                  </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
-                                    <ui:AssignOperation.To>
-                                      <OutArgument x:TypeArguments="x:Object">[dtIngredientes.Rows(dtIngredientes.Rows.Count - 1)("Ingrediente")]</OutArgument>
-                                    </ui:AssignOperation.To>
-                                    <ui:AssignOperation.Value>
-                                      <InArgument x:TypeArguments="x:Object">[currentText]</InArgument>
-                                    </ui:AssignOperation.Value>
-                                  </ui:AssignOperation>
-                                </scg:List>
-                              </ui:MultipleAssign.AssignOperations>
-                            </ui:MultipleAssign>
-                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{cantidadStr, currentText}]" DataTable="[dtIngredientes]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="479,216" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{cantidadStr, currentText}]" DataTable="[dtIngredientes]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="479,216" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
                           </Sequence>
                         </ActivityAction>
                       </ui:ForEach.Body>
