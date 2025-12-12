@@ -126,7 +126,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="prueba_web" sap:VirtualizedContainerService.HintSize="1014,4070.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="prueba_web" sap:VirtualizedContainerService.HintSize="1014,3944" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="respuesta" />
       <Variable x:TypeArguments="x:Boolean" Default="[continuar = True]" Name="continuar" />
@@ -136,9 +136,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[continuar = True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="617.6,4047.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[continuar = True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="617.6,3920.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="616,3925.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="616,3799.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -353,7 +353,7 @@
               <OutArgument x:TypeArguments="x:String">[respuesta]</OutArgument>
             </ui:InputDialog.Result>
           </ui:InputDialog>
-          <ui:MultipleAssign DisplayName="Asignación múltiple" sap:VirtualizedContainerService.HintSize="582.4,149.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+          <ui:MultipleAssign DisplayName="Asignación múltiple" sap:VirtualizedContainerService.HintSize="582.4,140.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
@@ -367,7 +367,6 @@
               </scg:List>
             </ui:MultipleAssign.AssignOperations>
           </ui:MultipleAssign>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Bandeja de mensajes" sap:VirtualizedContainerService.HintSize="582.4,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Hola&quot;]" />
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
     </ui:InterruptibleDoWhile>
