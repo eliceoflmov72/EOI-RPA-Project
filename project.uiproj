@@ -1,0 +1,6 @@
+{
+  "Name": "ProyectoPruebaElicio",
+  "ProjectType": "Process",
+  "Description": "Proceso en blanco",
+  "MainFile": "Main.xaml"
+}
