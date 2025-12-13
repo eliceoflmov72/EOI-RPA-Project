@@ -118,7 +118,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Atraves de datos Excel encviar correo" sap:VirtualizedContainerService.HintSize="581,1469" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Atraves de datos Excel encviar correo" sap:VirtualizedContainerService.HintSize="581,1609" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="RutaIngredientesDescargados" />
         <Variable x:TypeArguments="x:String" Name="Asunto" />
@@ -139,13 +139,13 @@
           <InArgument x:TypeArguments="x:String">["D:\Documentos\Cursos\RPA\Proyecto\Ingredientes_descargados.xlsx"]</InArgument>
         </Assign.Value>
       </Assign>
-      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" CreateNewFile="False" DisplayName="Abrir archivo que contiene los ingredientes" sap:VirtualizedContainerService.HintSize="547,1234" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ReadOnly="True" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[RutaIngredientesDescargados]">
+      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" CreateNewFile="False" DisplayName="Abrir archivo que contiene los ingredientes" sap:VirtualizedContainerService.HintSize="547,1374" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ReadOnly="True" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[RutaIngredientesDescargados]">
         <ueab:ExcelApplicationCard.Body>
           <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="513,938" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Lectura y escritura de los ingredientes" sap:VirtualizedContainerService.HintSize="513,1038" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="Email" />
               </Sequence.Variables>
@@ -192,7 +192,7 @@
                 </ui:MultipleAssign.AssignOperations>
               </ui:MultipleAssign>
               <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="479,123" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[strBody]" />
-              <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID0}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" Body="[strBody]" ConnectionId="3d62a5c8-7d2d-45a8-9d39-2aca11d23e1e" DisplayName="Enviar correo electrónico" sap:VirtualizedContainerService.HintSize="479,452" sap2010:WorkflowViewState.IdRef="SendMailConnections_3" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[Asunto]" To="[New String(){&quot;mariannetorrealba@outlook.es&quot;}]" UseConnectionService="True" UseSharedMailbox="False">
+              <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID0}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" Body="[strBody]" ConnectionId="3d62a5c8-7d2d-45a8-9d39-2aca11d23e1e" DisplayName="Enviar correo electrónico" sap:VirtualizedContainerService.HintSize="479,552" sap2010:WorkflowViewState.IdRef="SendMailConnections_3" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[Asunto]" To="[New String(){&quot;mariannetorrealba@outlook.es&quot;}]" UseConnectionService="True" UseSharedMailbox="False">
                 <umam:SendMailConnections.AttachmentsBackup>
                   <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
                     <usau:BackupSlot.BackupValues>
