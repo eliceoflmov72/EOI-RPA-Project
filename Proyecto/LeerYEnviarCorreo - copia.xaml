@@ -112,13 +112,13 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LeerYEnviarCorreo" sap:VirtualizedContainerService.HintSize="704,1515" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LeerYEnviarCorreo" sap:VirtualizedContainerService.HintSize="1116,1515" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Leer Excel  y enviar correo." sap:VirtualizedContainerService.HintSize="581,1492" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Atraves de datos Excel encviar correo" sap:VirtualizedContainerService.HintSize="581,1469" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="RutaIngredientesDescargados" />
         <Variable x:TypeArguments="x:String" Name="Asunto" />
