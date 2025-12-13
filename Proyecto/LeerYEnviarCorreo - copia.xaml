@@ -112,13 +112,13 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LeerYEnviarCorreo" sap:VirtualizedContainerService.HintSize="1116,1515" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LeerYEnviarCorreo" sap:VirtualizedContainerService.HintSize="1116,1698" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Atraves de datos Excel encviar correo" sap:VirtualizedContainerService.HintSize="581,1609" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Atraves de datos Excel enviar correo" sap:VirtualizedContainerService.HintSize="581,1569" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="RutaIngredientesDescargados" />
         <Variable x:TypeArguments="x:String" Name="Asunto" />
@@ -139,7 +139,7 @@
           <InArgument x:TypeArguments="x:String">["D:\Documentos\Cursos\RPA\Proyecto\Ingredientes_descargados.xlsx"]</InArgument>
         </Assign.Value>
       </Assign>
-      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" CreateNewFile="False" DisplayName="Abrir archivo que contiene los ingredientes" sap:VirtualizedContainerService.HintSize="547,1374" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ReadOnly="True" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[RutaIngredientesDescargados]">
+      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" CreateNewFile="False" DisplayName="Abrir archivo que contiene los ingredientes" sap:VirtualizedContainerService.HintSize="547,1334" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ReadOnly="True" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[RutaIngredientesDescargados]">
         <ueab:ExcelApplicationCard.Body>
           <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
             <ActivityAction.Argument>
