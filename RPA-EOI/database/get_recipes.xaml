@@ -1,4 +1,15 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="get_recipes" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="get_recipes_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="get_recipes" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="OutputRecetas" Type="OutArgument(scg:List(x:String))">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>get_recipes_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -26,6 +37,8 @@
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -58,18 +71,44 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="get_recipes" sap:VirtualizedContainerService.HintSize="1075,449.65666666666664" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="get_recipes" sap:VirtualizedContainerService.HintSize="973,583.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="mongoUrl" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="try&#xA;{&#xA;    var client = new MongoDB.Driver.MongoClient(connectionString);&#xA;    var database = client.GetDatabase(&quot;robocheff&quot;);&#xA;    var collection = database.GetCollection&lt;MongoDB.Bson.BsonDocument&gt;(&quot;recetas&quot;);&#xA;&#xA;    // Filtro vacío&#xA;    var emptyFilter = MongoDB.Driver.FilterDefinition&lt;MongoDB.Bson.BsonDocument&gt;.Empty;&#xA;&#xA;    // FindSync síncrono&#xA;    var cursor = collection.FindSync&lt;MongoDB.Bson.BsonDocument&gt;(emptyFilter);&#xA;&#xA;    // Lista para almacenar los documentos (iteramos manualmente)&#xA;    var documentos = new System.Collections.Generic.List&lt;MongoDB.Bson.BsonDocument&gt;();&#xA;&#xA;    while (cursor.MoveNext())&#xA;    {&#xA;        foreach (var doc in cursor.Current)&#xA;        {&#xA;            documentos.Add(doc);&#xA;        }&#xA;    }&#xA;&#xA;    var listaRecetas = new System.Collections.Generic.List&lt;string&gt;();&#xA;&#xA;    if (documentos.Count == 0)&#xA;    {&#xA;        listaRecetas.Add(&quot;No hay recetas guardadas aún en la base de datos 'robocheff'.&quot;);&#xA;    }&#xA;    else&#xA;    {&#xA;        int numeroReceta = 1;&#xA;        foreach (var doc in documentos)&#xA;        {&#xA;            string caracteristicas = doc.GetValue(&quot;caracteristicas&quot;, &quot;Sin descripción&quot;).AsString;&#xA;&#xA;            var ingredientesArray = doc.GetValue(&quot;ingredientes&quot;, new MongoDB.Bson.BsonArray()).AsBsonArray;&#xA;            var listaIngredientes = new System.Collections.Generic.List&lt;string&gt;();&#xA;&#xA;            foreach (var ing in ingredientesArray)&#xA;            {&#xA;                string cantidad = ing.AsBsonDocument.GetValue(&quot;cantidad&quot;, &quot;&quot;).AsString;&#xA;                string ingrediente = ing.AsBsonDocument.GetValue(&quot;ingrediente&quot;, &quot;&quot;).AsString;&#xA;                string linea = (cantidad.Trim() + &quot; &quot; + ingrediente.Trim()).Trim();&#xA;                if (!string.IsNullOrWhiteSpace(linea))&#xA;                {&#xA;                    listaIngredientes.Add(&quot;• &quot; + linea);&#xA;                }&#xA;            }&#xA;&#xA;            string recetaTexto = &quot;--- RECETA &quot; + numeroReceta.ToString() + &quot; ---\n&quot; +&#xA;                                 &quot;Descripción:\n&quot; + caracteristicas.Trim() + &quot;\n\n&quot; +&#xA;                                 &quot;Ingredientes:\n&quot; + string.Join(&quot;\n&quot;, listaIngredientes);&#xA;&#xA;            if (doc.Contains(&quot;fechaGuardado&quot;))&#xA;            {&#xA;                var fecha = doc[&quot;fechaGuardado&quot;].ToUniversalTime();&#xA;                recetaTexto = recetaTexto + &quot;\nGuardada el: &quot; + fecha.ToString(&quot;yyyy-MM-dd HH:mm&quot;) + &quot; UTC&quot;;&#xA;            }&#xA;&#xA;            recetaTexto = recetaTexto + &quot;\n&quot;;&#xA;&#xA;            listaRecetas.Add(recetaTexto);&#xA;            numeroReceta++;&#xA;        }&#xA;    }&#xA;&#xA;    recetasOutput = listaRecetas;&#xA;&#xA;    System.Console.WriteLine(&quot;¡Se leyeron &quot; + documentos.Count.ToString() + &quot; recetas correctamente de MongoDB!&quot;);&#xA;}&#xA;catch (System.Exception ex)&#xA;{&#xA;    throw new System.Exception(&quot;Error al leer recetas de MongoDB: &quot; + ex.Message);&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="mongoUrl" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="450,186" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[mongoUrl]</OutArgument>
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="try&#xD;&#xA;{&#xD;&#xA;    var client = new MongoDB.Driver.MongoClient(connectionString);&#xD;&#xA;    var database = client.GetDatabase(&quot;robocheff&quot;);&#xD;&#xA;    var collection = database.GetCollection&lt;MongoDB.Bson.BsonDocument&gt;(&quot;recetas&quot;);&#xD;&#xA;&#xD;&#xA;    // Filtro vacío&#xD;&#xA;    var emptyFilter = MongoDB.Driver.FilterDefinition&lt;MongoDB.Bson.BsonDocument&gt;.Empty;&#xD;&#xA;&#xD;&#xA;    // FindSync síncrono&#xD;&#xA;    var cursor = collection.FindSync&lt;MongoDB.Bson.BsonDocument&gt;(emptyFilter);&#xD;&#xA;&#xD;&#xA;    // Iterar manualmente el cursor (la forma más segura en Invoke Code)&#xD;&#xA;    var documentos = new System.Collections.Generic.List&lt;MongoDB.Bson.BsonDocument&gt;();&#xD;&#xA;&#xD;&#xA;    while (cursor.MoveNext())&#xD;&#xA;    {&#xD;&#xA;        foreach (var doc in cursor.Current)&#xD;&#xA;        {&#xD;&#xA;            documentos.Add(doc);&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;listaRecetas = new System.Collections.Generic.List&lt;string&gt;();&#xD;&#xA;&#xD;&#xA;    if (documentos.Count == 0)&#xD;&#xA;    {&#xD;&#xA;        listaRecetas.Add(&quot;No hay recetas guardadas aún en la base de datos 'robocheff'.&quot;);&#xD;&#xA;    }&#xD;&#xA;    else&#xD;&#xA;    {&#xD;&#xA;        int numeroReceta = 1;&#xD;&#xA;        foreach (var doc in documentos)&#xD;&#xA;        {&#xD;&#xA;            string caracteristicas = doc.GetValue(&quot;caracteristicas&quot;, &quot;Sin descripción&quot;).AsString;&#xD;&#xA;&#xD;&#xA;            var ingredientesArray = doc.GetValue(&quot;ingredientes&quot;, new MongoDB.Bson.BsonArray()).AsBsonArray;&#xD;&#xA;            var listaIngredientes = new System.Collections.Generic.List&lt;string&gt;();&#xD;&#xA;&#xD;&#xA;            foreach (var ing in ingredientesArray)&#xD;&#xA;            {&#xD;&#xA;                string cantidad = ing.AsBsonDocument.GetValue(&quot;cantidad&quot;, &quot;&quot;).AsString;&#xD;&#xA;                string ingrediente = ing.AsBsonDocument.GetValue(&quot;ingrediente&quot;, &quot;&quot;).AsString;&#xD;&#xA;                string linea = (cantidad.Trim() + &quot; &quot; + ingrediente.Trim()).Trim();&#xD;&#xA;                if (!string.IsNullOrWhiteSpace(linea))&#xD;&#xA;                {&#xD;&#xA;                    listaIngredientes.Add(&quot;• &quot; + linea);&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;&#xD;&#xA;            string recetaTexto = &quot;--- RECETA &quot; + numeroReceta.ToString() + &quot; ---\n&quot; +&#xD;&#xA;                                 &quot;Descripción:\n&quot; + caracteristicas.Trim() + &quot;\n\n&quot; +&#xD;&#xA;                                 &quot;Ingredientes:\n&quot; + string.Join(&quot;\n&quot;, listaIngredientes);&#xD;&#xA;&#xD;&#xA;            if (doc.Contains(&quot;fechaGuardado&quot;))&#xD;&#xA;            {&#xD;&#xA;                var fecha = doc[&quot;fechaGuardado&quot;].ToUniversalTime();&#xD;&#xA;                recetaTexto = recetaTexto + &quot;\nGuardada el: &quot; + fecha.ToString(&quot;yyyy-MM-dd HH:mm&quot;) + &quot; UTC&quot;;&#xD;&#xA;            }&#xD;&#xA;&#xD;&#xA;            recetaTexto = recetaTexto + &quot;\n&quot;;&#xD;&#xA;&#xD;&#xA;            listaRecetas.Add(recetaTexto);&#xD;&#xA;            numeroReceta++;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    System.Console.WriteLine(&quot;¡Se leyeron &quot; + documentos.Count.ToString() + &quot; recetas correctamente de MongoDB!&quot;);&#xD;&#xA;}&#xD;&#xA;catch (System.Exception ex)&#xD;&#xA;{&#xD;&#xA;    throw new System.Exception(&quot;Error al leer las recetas de MongoDB: &quot; + ex.Message);&#xD;&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,188" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
       <ui:InvokeCode.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="connectionString">mongodb+srv://robocheff:iYdYkFohKPoCjlbO@cluster0.4fmivs7.mongodb.net/?retryWrites=true&amp;w=majority&amp;appName=Cluster0&amp;authSource=admin</InArgument>
-        <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="recetasOutput" />
+        <InArgument x:TypeArguments="x:String" x:Key="connectionString">
+          <Literal x:TypeArguments="x:String">mongodb+srv://robocheff:iYdYkFohKPoCjlbO@cluster0.4fmivs7.mongodb.net/?retryWrites=true&amp;w=majority&amp;appName=Cluster0&amp;authSource=admin</Literal>
+        </InArgument>
+        <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="listaRecetas">
+          <VisualBasicReference x:TypeArguments="scg:List(x:String)" ExpressionText="OutputRecetas" />
+        </OutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
   </Sequence>
