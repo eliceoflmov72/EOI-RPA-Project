@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="save_recipe" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="save_recipe_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -25,27 +25,19 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
-      <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Runtime.Serialization</x:String>
-      <x:String>System.ComponentModel</x:String>
-      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
@@ -54,18 +46,13 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Net.Mail</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Private.Xml</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
@@ -73,14 +60,20 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="450,53" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="save_recipe" sap:VirtualizedContainerService.HintSize="973,463.65666666666664" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="/**&#xD;&#xA;try&#xD;&#xA;{&#xD;&#xA;    var client = new MongoDB.Driver.MongoClient(connectionString);&#xD;&#xA;    var database = client.GetDatabase(&quot;robocheff&quot;);&#xD;&#xA;    var collection = database.GetCollection&lt;MongoDB.Bson.BsonDocument&gt;(&quot;recetas&quot;);&#xD;&#xA;&#xD;&#xA;    // Convertir DataTable a array de ingredientes&#xD;&#xA;    var ingredientesArray = new MongoDB.Bson.BsonArray();&#xD;&#xA;&#xD;&#xA;    foreach (System.Data.DataRow row in dataTableIngredientes.Rows)&#xD;&#xA;    {&#xD;&#xA;        var ingredienteDoc = new MongoDB.Bson.BsonDocument&#xD;&#xA;        {&#xD;&#xA;            { &quot;cantidad&quot;, row[&quot;cantidad&quot;].ToString().Trim() },&#xD;&#xA;            { &quot;ingrediente&quot;, row[&quot;ingrediente&quot;].ToString().Trim() }&#xD;&#xA;        };&#xD;&#xA;        ingredientesArray.Add(ingredienteDoc);&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    // Crear el documento completo de la receta&#xD;&#xA;    var recetaDocumento = new MongoDB.Bson.BsonDocument&#xD;&#xA;    {&#xD;&#xA;        { &quot;caracteristicas&quot;, caracteristicas.Trim() },&#xD;&#xA;        { &quot;ingredientes&quot;, ingredientesArray },&#xD;&#xA;        { &quot;fechaGuardado&quot;, System.DateTime.UtcNow }  // Opcional: para saber cuándo se guardó&#xD;&#xA;    };&#xD;&#xA;&#xD;&#xA;    // Insertar todo de una vez&#xD;&#xA;    collection.InsertOne(recetaDocumento);&#xD;&#xA;&#xD;&#xA;    System.Console.WriteLine(&quot;¡Receta completa guardada en un solo documento en MongoDB!&quot;);&#xD;&#xA;    System.Console.WriteLine($&quot;Características: {caracteristicas.Substring(0, System.Math.Min(100, caracteristicas.Length))}...&quot;);&#xD;&#xA;    System.Console.WriteLine($&quot;Ingredientes guardados: {ingredientesArray.Count}&quot;);&#xD;&#xA;}&#xD;&#xA;catch (System.Exception ex)&#xD;&#xA;{&#xD;&#xA;    throw new System.Exception(&quot;Error al guardar la receta en MongoDB: &quot; + ex.Message);&#xD;&#xA;}&#xD;&#xA;**/" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="connectionString">mongodb+srv://robocheff:iYdYkFohKPoCjlbO@cluster0.4fmivs7.mongodb.net/?retryWrites=true&amp;w=majority&amp;appName=Cluster0&amp;authSource=admin</InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="dataTableIngredientes" />
+        <InArgument x:TypeArguments="x:String" x:Key="caracteristicas" />
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
   </Sequence>
 </Activity>

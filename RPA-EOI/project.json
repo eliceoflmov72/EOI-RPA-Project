@@ -4,6 +4,7 @@
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
+    "MongoDB.Driver.Core": "[2.30.0]",
     "UiPath.Excel.Activities": "[3.3.1]",
     "UiPath.GSuite.Activities": "[3.5.11]",
     "UiPath.IntegrationService.Activities": "[1.21.0]",
