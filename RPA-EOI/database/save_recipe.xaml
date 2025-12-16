@@ -1,5 +1,10 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="save_recipe" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="InNombre" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
     <x:Property Name="InCaracteristicas" Type="InArgument(x:String)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
@@ -100,7 +105,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="save_recipe" sap:VirtualizedContainerService.HintSize="973,547.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="save_recipe" sap:VirtualizedContainerService.HintSize="1060,547.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="mongoUrl" />
     </Sequence.Variables>
@@ -114,7 +119,7 @@
         <OutArgument x:TypeArguments="x:String">[mongoUrl]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="try&#xA;{&#xA;    var client = new MongoDB.Driver.MongoClient(connectionString);&#xA;    var database = client.GetDatabase(&quot;robocheff&quot;);&#xA;    var collection = database.GetCollection&lt;MongoDB.Bson.BsonDocument&gt;(&quot;recipes&quot;);&#xA;&#xA;    var ingredientesArray = new MongoDB.Bson.BsonArray();&#xA;&#xA;    foreach (System.Data.DataRow row in dataTableIngredientes.Rows)&#xA;    {&#xA;        var ingredienteDoc = new MongoDB.Bson.BsonDocument&#xA;        {&#xA;            { &quot;cantidad&quot;, row[&quot;cantidad&quot;].ToString().Trim() },&#xA;            { &quot;ingrediente&quot;, row[&quot;ingrediente&quot;].ToString().Trim() }&#xA;        };&#xA;        ingredientesArray.Add(ingredienteDoc);&#xA;    }&#xA;&#xA;    var recetaDocumento = new MongoDB.Bson.BsonDocument&#xA;    {&#xA;        { &quot;caracteristicas&quot;, caracteristicas.Trim() },&#xA;        { &quot;ingredientes&quot;, ingredientesArray },&#xA;        { &quot;fechaGuardado&quot;, System.DateTime.UtcNow }&#xA;    };&#xA;&#xA;    collection.InsertOne(recetaDocumento);&#xA;&#xA;    System.Console.WriteLine(&quot;¡Receta guardada correctamente en MongoDB!&quot;);&#xA;    System.Console.WriteLine(&quot;Ingredientes guardados: &quot; + ingredientesArray.Count);&#xA;&#xA;    // Corregido el Substring para evitar el error de ReadOnlySpan&#xA;    int longitudPreview = System.Math.Min(100, caracteristicas.Length);&#xA;    System.Console.WriteLine(&quot;Características (primeros caracteres): &quot; + caracteristicas.Substring(0, longitudPreview) + &quot;...&quot;);&#xA;}&#xA;catch (System.Exception ex)&#xA;{&#xA;    throw new System.Exception(&quot;Error al guardar la receta: &quot; + ex.Message);&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="try&#xD;&#xA;{&#xD;&#xA;    var client = new MongoDB.Driver.MongoClient(connectionString);&#xD;&#xA;    var database = client.GetDatabase(&quot;robocheff&quot;);&#xD;&#xA;    var collection = database.GetCollection&lt;MongoDB.Bson.BsonDocument&gt;(&quot;recetas&quot;);&#xD;&#xA;&#xD;&#xA;    var ingredientesArray = new MongoDB.Bson.BsonArray();&#xD;&#xA;&#xD;&#xA;    foreach (System.Data.DataRow row in dataTableIngredientes.Rows)&#xD;&#xA;    {&#xD;&#xA;        var ingredienteDoc = new MongoDB.Bson.BsonDocument&#xD;&#xA;        {&#xD;&#xA;            { &quot;cantidad&quot;, row[&quot;cantidad&quot;].ToString().Trim() },&#xD;&#xA;            { &quot;ingrediente&quot;, row[&quot;ingrediente&quot;].ToString().Trim() }&#xD;&#xA;        };&#xD;&#xA;        ingredientesArray.Add(ingredienteDoc);&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    // Documento completo con el nuevo campo &quot;nombre&quot;&#xD;&#xA;    var recetaDocumento = new MongoDB.Bson.BsonDocument&#xD;&#xA;    {&#xD;&#xA;        { &quot;nombre&quot;, nombre.Trim() },&#xD;&#xA;        { &quot;caracteristicas&quot;, caracteristicas.Trim() },&#xD;&#xA;        { &quot;ingredientes&quot;, ingredientesArray },&#xD;&#xA;        { &quot;fechaGuardado&quot;, System.DateTime.UtcNow }&#xD;&#xA;    };&#xD;&#xA;&#xD;&#xA;    // Insertar en MongoDB&#xD;&#xA;    collection.InsertOne(recetaDocumento);&#xD;&#xA;&#xD;&#xA;    System.Console.WriteLine(&quot;¡Receta guardada correctamente en MongoDB!&quot;);&#xD;&#xA;    System.Console.WriteLine($&quot;Nombre: {nombre.Trim()}&quot;);&#xD;&#xA;    System.Console.WriteLine($&quot;Ingredientes guardados: {ingredientesArray.Count}&quot;);&#xD;&#xA;&#xD;&#xA;    // Preview seguro de características&#xD;&#xA;    int longitudPreview = System.Math.Min(100, caracteristicas.Length);&#xD;&#xA;    System.Console.WriteLine(&quot;Características (primeros caracteres): &quot; + caracteristicas.Substring(0, longitudPreview) + &quot;...&quot;);&#xD;&#xA;}&#xD;&#xA;catch (System.Exception ex)&#xD;&#xA;{&#xD;&#xA;    throw new System.Exception(&quot;Error al guardar la receta en MongoDB: &quot; + ex.Message);&#xD;&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="connectionString">
           <VisualBasicValue x:TypeArguments="x:String" ExpressionText="mongoUrl" />
@@ -124,6 +129,9 @@
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="caracteristicas">
           <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InCaracteristicas" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="nombre">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InNombre" />
         </InArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
