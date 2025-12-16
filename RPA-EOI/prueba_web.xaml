@@ -131,6 +131,7 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable1</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -139,34 +140,27 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="prueba_web" sap:VirtualizedContainerService.HintSize="967,4522" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="prueba_web" sap:VirtualizedContainerService.HintSize="958.8000000000001,4834.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="respuesta" />
       <Variable x:TypeArguments="x:Boolean" Default="[continuar = True]" Name="continuar" />
       <Variable x:TypeArguments="sd2:DataTable" Name="dtIngredientes" />
-      <Variable x:TypeArguments="x:Int32" Name="index">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:String x:Key="SourceIdRef">InterruptibleDoWhile_1</x:String>
-            <x:String x:Key="SourcePropertyName">CurrentIndex</x:String>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="index" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleDoWhile Condition="[respuesta = &quot;Si&quot;]" CurrentIndex="[index]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="621,4499" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile Condition="[respuesta = &quot;Si&quot;]" CurrentIndex="[index]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="617.6,4811.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="619,4377" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="616,4689.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Busqueda de la receta en la WEB" sap:VirtualizedContainerService.HintSize="585,3720" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Busqueda de la receta en la WEB" sap:VirtualizedContainerService.HintSize="582.4,4034.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="RutaNavegador" />
               <Variable x:TypeArguments="x:String" Name="RecetaABuscar" />
@@ -176,12 +170,12 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Cuadro de diálogo de entrada" sap:VirtualizedContainerService.HintSize="551,279" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Introduce receta a buscar" Title="¿Que te apetece comer hoy?" TopMost="False">
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Cuadro de diálogo de entrada" sap:VirtualizedContainerService.HintSize="548.8,277.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Introduce receta a buscar" Title="¿Que te apetece comer hoy?" TopMost="False">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:String">[RecetaABuscar]</OutArgument>
               </ui:InputDialog.Result>
             </ui:InputDialog>
-            <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="551,179" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="548.8,178.4" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[RutaNavegador]</OutArgument>
               </Assign.To>
@@ -189,14 +183,15 @@
                 <InArgument x:TypeArguments="x:String">["https://www.recetasgratis.net/"]</InArgument>
               </Assign.Value>
             </Assign>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Nueva pestaña" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="551,3162" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="15342c43-f986-490d-bab4-7c9a73bd65df" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Nueva pestaña" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="548.8,3478.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="15342c43-f986-490d-bab4-7c9a73bd65df" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="549,2964" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="547.2,3280.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="nombreReceta" />
                       <Variable x:TypeArguments="x:String" Name="caracteristicas" />
                       <Variable x:TypeArguments="x:String" Name="variable4" />
                       <Variable x:TypeArguments="x:String" Name="variable3" />
@@ -207,14 +202,14 @@
                       <Variable x:TypeArguments="s:String[]" Name="arrayIngredientes" />
                       <Variable x:TypeArguments="x:String" Name="ingredientesTexto" />
                       <Variable x:TypeArguments="x:String" Name="unidad" />
-                      <Variable x:TypeArguments="x:Int32" Name="Item" />
+                      <Variable x:TypeArguments="x:Int32" Default="0" Name="Item" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en buscador" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="515,302" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" Text="[RecetaABuscar]" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en buscador" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="513.6,301.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" Text="[RecetaABuscar]" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="recetasgratis.net" CVScreenId="94cc45b2-d8da-4c54-ad73-f9d3bf98220e" ContentHash="GE4axCnK6UqPPn7DQUf2Yw" CvElementArea="660, 144, 175, 34" CvType="InputBox" DesignTimeRectangle="661, 145, 175, 34" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='q' tag='INPUT' /&gt;" Guid="b3751050-2b49-44d7-a567-638b86025cf3" InformativeScreenshot="888ffb79a78db3c9d9bfe8a35ab1c73e.png" Reference="olP_1sCdA0ucfGnOEerWrQ/F7Dt71UuLEi4YxsD-hW9sg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Recetas de cocina. +20.000 recetas fáciles paso a paso' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
                       </uix:NTypeInto.Target>
@@ -229,7 +224,7 @@
                         </uix:VerifyExecutionTypeIntoOptions>
                       </uix:NTypeInto.VerifyOptions>
                     </uix:NTypeInto>
-                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Click en el botón de buscar" sap:VirtualizedContainerService.HintSize="515,191" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Click en el botón de buscar" sap:VirtualizedContainerService.HintSize="513.6,190.4" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
                       <ui:SendHotkey.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="396bfdb8-4ca8-4124-977d-a805da8eea74" InformativeScreenshot="8cd69062e457ec9de83fdb4293303787" Selector="&lt;webctrl parentid='buscador' tag='SPAN' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -241,23 +236,28 @@
                         </ui:Target>
                       </ui:SendHotkey.Target>
                     </ui:SendHotkey>
-                    <uix:NClick ActivateBefore="True" AlterIfDisabled="False" ClickType="Single" DisplayName="Seleccionar la primera receta" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="515,198" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" Version="V5">
+                    <uix:NClick ActivateBefore="True" AlterIfDisabled="False" ClickType="Single" DisplayName="Seleccionar la primera receta" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="513.6,197.6" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="recetasgratis.net/busqueda" CVScreenId="3a2c5efe-aa57-4973-8aa7-4f37c2fbabef" ContentHash="pq5teqsE8kqThZEwrXZ-iA" CvTextArea="638, 288, 247, 16" CvTextArgument="Receta de Tortilla de zucchini" CvType="Text" DesignTimeRectangle="427, 286, 736, 23" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a' parentclass='resultado link' /&gt;" Guid="ebcae93c-0fb6-4940-a678-86ccd1bcb489" InformativeScreenshot="b73a0be87a7a31a9901789fa946b74e2.png" Reference="olP_1sCdA0ucfGnOEerWrQ/wM3qdlB07UW_32ojx574dw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resultados de tortilla - 875 recetas' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NGetText DisplayName="Obtener ingredientes" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="515,147" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" ScrapingOptions="None" TextString="[ingredientesTexto]" Version="V5">
+                    <uix:NGetText DisplayName="Obtener ingredientes" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="513.6,146.4" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" ScrapingOptions="None" TextString="[ingredientesTexto]" Version="V5">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="recetasgratis.net/receta-de-sopa-de-hongos-77841.html" ContentHash="y7Tc2pPOo0SeqJnZ1GuFXg" DesignTimeRectangle="460, 514, 670, 350" ElementType="List" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='padding-left-0' tag='UL' /&gt;" Guid="79848c31-f5bc-4815-b62d-297369632e8f" InformativeScreenshot="43b069deac7a93c2b358009454855743.png" Reference="olP_1sCdA0ucfGnOEerWrQ/j2qUco5ja0ez3qxYA5vq2w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sopa de hongos - Receta FÁCIL' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <uix:NGetText DisplayName="Obtener características" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="515,147" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" TextString="[caracteristicasReceta]" Version="V5">
+                    <uix:NGetText DisplayName="Obtener características" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="513.6,146.4" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" TextString="[caracteristicasReceta]" Version="V5">
                       <uix:NGetText.Target>
-                        <uix:TargetAnchorable BrowserURL="recetasgratis.net/receta-de-sopa-de-hongos-77841.html" ContentHash="hNHPzHJXEkKGCRgyPO3-Hg" DesignTimeRectangle="428, 337, 734, 51" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='properties' parentid='top' tag='DIV' /&gt;" Guid="f4e45b2c-8294-4e15-84ba-7080fded9491" InformativeScreenshot="5a55ff10ca0fe2e981232451639c7045.png" Reference="olP_1sCdA0ucfGnOEerWrQ/j1KhfNQMDUS_cc81OnssUA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sopa de hongos - Receta FÁCIL' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                        <uix:TargetAnchorable BrowserURL="recetas.elperiodico.com/receta-de-tortilla-de-patatas-espanola-75075.html" ContentHash="dWWhsG_3Zk6NqRZCxPazPQ" DesignTimeRectangle="428, 288, 734, 51" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='properties' parentid='top' tag='DIV' /&gt;" Guid="9539524a-5e4f-4905-9de1-ae9805d4d9e7" InformativeScreenshot="a54114191f8c8b586f03d0f576217891.png" Reference="olP_1sCdA0ucfGnOEerWrQ/j1KhfNQMDUS_cc81OnssUA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tortilla de patatas - Receta ESPAÑOLA tradicional' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <ui:BuildDataTable DataTable="[dtIngredientes]" DisplayName="Crear DataTable" sap:VirtualizedContainerService.HintSize="515,96" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;caracteristicas&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Cantidad&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ingrediente&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-                    <Assign sap:VirtualizedContainerService.HintSize="515,179" sap2010:WorkflowViewState.IdRef="Assign_5">
+                    <uix:NGetText DisplayName="Obtener nombre receta" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="513.6,146.4" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" TextString="[nombreReceta]" Version="V5">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="recetas.elperiodico.com/receta-de-tortilla-de-patatas-espanola-75075.html" CVScreenId="40a5f87a-17c5-461c-a097-6aec10815546" ContentHash="sHK2HQW180eZ7WEFmXME4Q" CvType="AnyWordGroup" DesignTimeRectangle="423, 514, 744, 44" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" Guid="9b065d34-8051-4ad8-980a-75e07990ea56" InformativeScreenshot="d3b8d7e9fd85ca4e7463f57498452090.png" Reference="olP_1sCdA0ucfGnOEerWrQ/ZqoDGexLr0aHookQouJGdg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tortilla de patatas - Receta ESPAÑOLA tradicional' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <ui:BuildDataTable DataTable="[dtIngredientes]" DisplayName="Crear DataTable" sap:VirtualizedContainerService.HintSize="513.6,96" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;caracteristicas&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Cantidad&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Ingrediente&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;nombre&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+                    <Assign sap:VirtualizedContainerService.HintSize="513.6,178.4" sap2010:WorkflowViewState.IdRef="Assign_5">
                       <Assign.To>
                         <OutArgument x:TypeArguments="s:String[]">[arrayIngredientes]</OutArgument>
                       </Assign.To>
@@ -265,7 +265,7 @@
                         <InArgument x:TypeArguments="s:String[]">[System.Text.RegularExpressions.Regex.Split(ingredientesTexto.Trim, "\r\n|\r|\n").Where(Function(x) Not String.IsNullOrWhiteSpace(x)).Select(Function(x) x.Trim).ToArray()]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="515,179" sap2010:WorkflowViewState.IdRef="Assign_12">
+                    <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="513.6,178.4" sap2010:WorkflowViewState.IdRef="Assign_12">
                       <Assign.To>
                         <OutArgument x:TypeArguments="s:String[]">[arrayCaracteristicas]</OutArgument>
                       </Assign.To>
@@ -273,7 +273,7 @@
                         <InArgument x:TypeArguments="s:String[]">[System.Text.RegularExpressions.Regex.Split(caracteristicasReceta.Trim, "\r\n|\r|\n").Where(Function(x) Not String.IsNullOrWhiteSpace(x)).Select(Function(x) x.Trim).ToArray()]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="515,179" sap2010:WorkflowViewState.IdRef="Assign_14">
+                    <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="513.6,178.4" sap2010:WorkflowViewState.IdRef="Assign_14">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[caracteristicas]</OutArgument>
                       </Assign.To>
@@ -281,13 +281,13 @@
                         <InArgument x:TypeArguments="x:String">[String.Join(", ", arrayCaracteristicas)]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[Item]" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="515,926" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[arrayIngredientes]">
+                    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[Item]" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="513.6,924" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[arrayIngredientes]">
                       <ui:ForEach.Body>
                         <ActivityAction x:TypeArguments="x:String">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513,791" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,789.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="cantidadStr" />
                               <Variable x:TypeArguments="x:String" Name="lineaLimpia" />
@@ -297,7 +297,7 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="Assign_6">
+                            <Assign sap:VirtualizedContainerService.HintSize="478.4,178.4" sap2010:WorkflowViewState.IdRef="Assign_6">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">[lineaLimpia]</OutArgument>
                               </Assign.To>
@@ -305,7 +305,7 @@
                                 <InArgument x:TypeArguments="x:String">[currentText.Trim.ToLower]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,153" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,153.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
                               <ui:MultipleAssign.AssignOperations>
                                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -319,7 +319,7 @@
                                 </scg:List>
                               </ui:MultipleAssign.AssignOperations>
                             </ui:MultipleAssign>
-                            <Assign sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="Assign_11">
+                            <Assign sap:VirtualizedContainerService.HintSize="478.4,178.4" sap2010:WorkflowViewState.IdRef="Assign_11">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">[currentText]</OutArgument>
                               </Assign.To>
@@ -327,12 +327,12 @@
                                 <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(currentText, "^\s*([\d,./½¼⅓⅔⅕⅖⅗⅘⅙⅚⅐⅛⅜⅝⅞]+|\d+\/\d+)\s*", "").Trim]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;&quot; ,cantidadStr, currentText}]" DataTable="[dtIngredientes]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="479,216" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;&quot; ,cantidadStr, currentText}]" DataTable="[dtIngredientes]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="478.4,215.2" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
                           </Sequence>
                         </ActivityAction>
                       </ui:ForEach.Body>
                     </ui:ForEach>
-                    <Assign DisplayName="Establecer características (1 valor)" sap:VirtualizedContainerService.HintSize="515,179" sap2010:WorkflowViewState.IdRef="Assign_15">
+                    <Assign DisplayName="Establecer características (1 valor)" sap:VirtualizedContainerService.HintSize="513.6,178.4" sap2010:WorkflowViewState.IdRef="Assign_15">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Object">[dtIngredientes.Rows(0)("caracteristicas")]</OutArgument>
                       </Assign.To>
@@ -340,7 +340,15 @@
                         <InArgument x:TypeArguments="x:String">[caracteristicas]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="False" DisplayName="Guardar receta" sap:VirtualizedContainerService.HintSize="515,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="database\save_recipe.xaml">
+                    <Assign DisplayName="Establecer características (1 valor)" sap:VirtualizedContainerService.HintSize="513.6,178.4" sap2010:WorkflowViewState.IdRef="Assign_16">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Object">[dtIngredientes.Rows(0)("nombre")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[nombreReceta]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="False" DisplayName="Guardar receta" sap:VirtualizedContainerService.HintSize="513.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="database\save_recipe.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="sd2:DataTable" x:Key="InDataTableIngredientes">[dtIngredientes]</InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="InCaracteristicas">[caracteristicas]</InArgument>
@@ -368,7 +376,7 @@
               </uix:NApplicationCard.TargetApp>
             </uix:NApplicationCard>
           </Sequence>
-          <ui:DeleteFileX DisplayName="Borramos el excel" sap:VirtualizedContainerService.HintSize="585,117" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="excel\recetas.xlsx">
+          <ui:DeleteFileX DisplayName="Borramos el excel" sap:VirtualizedContainerService.HintSize="582.4,116.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="excel\recetas.xlsx">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -376,8 +384,8 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:DeleteFileX>
-          <ui:WriteRange WorkbookPathResource="{x:Null}" DataTable="[dtIngredientes]" DisplayName="Sobrescribimos excel" sap:VirtualizedContainerService.HintSize="585,152" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Hoja1" StartingCell="A1" WorkbookPath="excel\recetas.xlsx" />
-          <ui:InputDialog Options="{x:Null}" DisplayName="Preguntamos si seguimos" sap:VirtualizedContainerService.HintSize="585,324" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="¿Quieres seguir?" OptionsString="Si;No" Title="ChefBot" TopMost="False">
+          <ui:WriteRange WorkbookPathResource="{x:Null}" DataTable="[dtIngredientes]" DisplayName="Sobrescribimos excel" sap:VirtualizedContainerService.HintSize="582.4,152" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Hoja1" StartingCell="A1" WorkbookPath="excel\recetas.xlsx" />
+          <ui:InputDialog Options="{x:Null}" DisplayName="Preguntamos si seguimos" sap:VirtualizedContainerService.HintSize="582.4,322.4" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="¿Quieres seguir?" OptionsString="Si;No" Title="ChefBot" TopMost="False">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[respuesta]</OutArgument>
             </ui:InputDialog.Result>
