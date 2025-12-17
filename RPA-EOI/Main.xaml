@@ -108,30 +108,34 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1013,657" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="942,968" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Continuar" />
       <Variable x:TypeArguments="sd:DataTable" Name="DataTableIngredientes" />
+      <Variable x:TypeArguments="x:String" Name="nombre" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Continuar = &quot;Si&quot;]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="486,634" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Continuar = &quot;Si&quot;]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="486,945" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="484,512" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="484,823" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="variable1" />
+          </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Busqueda de la receta en la WEB" sap:VirtualizedContainerService.HintSize="450,335" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Busqueda de la receta en la WEB" sap:VirtualizedContainerService.HintSize="450,460" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="receta" />
-              <Variable x:TypeArguments="x:String" Name="nombre" />
               <Variable x:TypeArguments="x:String" Name="caracteristicas" />
               <Variable x:TypeArguments="s:String[]" Name="ingredientes" />
             </Sequence.Variables>
@@ -152,7 +156,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InputDialog>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Obtener datos de la web" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="GetDataFromWeb.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Obtener datos de la web" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="UseCase\GetDataFromWeb.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <OutArgument x:TypeArguments="x:String" x:Key="OutStrCaracteristicas">[caracteristicas]</OutArgument>
                 <OutArgument x:TypeArguments="s:String[]" x:Key="OutArrayIngredientes">[ingredientes]</OutArgument>
@@ -161,12 +165,12 @@
               </ui:InvokeWorkflowFile.Arguments>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Parsear datos a DataTable" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ParseRecipe.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Parsear datos a DataTable" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="UseCase\ParseRecipe.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="InCaracteristicas">[caracteristicas]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="InNombre">[nombre]</InArgument>
@@ -194,7 +198,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
           </Sequence>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Guardar Archivos (Excel, PDF, HTML)" sap:VirtualizedContainerService.HintSize="450,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SaveFiles.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Guardar Archivos (Excel, PDF, HTML)" sap:VirtualizedContainerService.HintSize="450,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="UseCase\SaveFiles.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="sd:DataTable" x:Key="InDataTableIngredientes">[DataTableIngredientes]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
@@ -204,6 +208,12 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Enviar correo" sap:VirtualizedContainerService.HintSize="450,186" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="UseCase\SendEmail.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="pdfPath" />
+              <InArgument x:TypeArguments="x:String" x:Key="name">[nombre]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <ui:InputDialog Options="{x:Null}" DisplayName="Preguntamos si seguimos" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="¿Quieres seguir?" OptionsString="Si;No" Title="ChefBot" TopMost="False">
             <ui:InputDialog.Result>
