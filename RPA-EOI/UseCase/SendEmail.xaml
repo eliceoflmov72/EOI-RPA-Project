@@ -1,6 +1,6 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="SendEmail" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="name" Type="InArgument(x:String)" />
+    <x:Property Name="InName" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -118,7 +118,7 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SendEmail" sap:VirtualizedContainerService.HintSize="958.8000000000001,622.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SendEmail" sap:VirtualizedContainerService.HintSize="942,645" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="pdfPath" />
     </Sequence.Variables>
@@ -127,7 +127,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[pdfPath]</OutArgument>
       </Assign.To>
@@ -135,7 +135,7 @@
         <InArgument x:TypeArguments="x:String">[Path.Combine(Directory.GetCurrentDirectory, "pdf\Receta.pdf")]</InArgument>
       </Assign.Value>
     </Assign>
-    <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" AttachmentInputMode="UseExisting" Attachments="[New List(Of UiPath.Platform.ResourceHandling.IResource) From {UiPath.Platform.ResourceHandling.LocalResource.FromPath(pdfPath)}]" AuthScopesInvalid="False" ConnectionId="c2a15f86-171e-47be-bbfe-b42aec2b9051" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="449.6,424.8" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="TEXT" SaveAsDraft="False" Subject="[name]" TextBody="[String.Format(&quot;&lt;div style='font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center;'&gt;&#xD;&#xA;&#xD;&#xA; &lt;h1 style='color: #2c3e50; font-size: 32px; margin-bottom: 10px;'&gt;¡Tu receta está lista! 🍳&lt;/h1&gt;&#xD;&#xA;&#xD;&#xA; &lt;p style='font-size: 18px; color: #555; margin: 15px 0;'&gt;&#xD;&#xA;&#xD;&#xA;  Aquí tienes la receta completa de:&#xD;&#xA;&#xD;&#xA; &lt;/p&gt;&#xD;&#xA;&#xD;&#xA; &lt;h2 style='font-size: 28px; color: #e74c3c; margin: 20px 0; font-weight: bold;'&gt;{0}&lt;/h2&gt;&#xD;&#xA;&#xD;&#xA; &lt;p style='font-size: 16px; color: #7f8c8d;'&gt;&#xD;&#xA;&#xD;&#xA;  ¡Que aproveche! 😋&#xD;&#xA;&#xD;&#xA; &lt;/p&gt;&#xD;&#xA;&#xD;&#xA;&lt;/div&gt;&quot;, name)]" To="[New String(){&quot;eliceomoreta@gmail.com&quot;,&quot;palango4887@gmail.com&quot;}]" UseConnectionService="True">
+    <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" ConnectionAccountName="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AttachmentPaths="{x:Null}" Attachments="[New List(Of UiPath.Platform.ResourceHandling.IResource) From {UiPath.Platform.ResourceHandling.LocalResource.FromPath(pdfPath)}]" AuthScopesInvalid="False" Bcc="{x:Null}" Body="[String.Format(&quot;&lt;div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 12px; text-align: center;'&gt;&lt;h1 style='color: #2c3e50; font-size: 28px;'&gt;¡Tu receta está lista! 🍳&lt;/h1&gt;&lt;p style='font-size: 16px; color: #555;'&gt;Aquí tienes la receta completa de:&lt;/p&gt;&lt;h2 style='font-size: 24px; color: #e74c3c; font-weight: bold;'&gt;{0}&lt;/h2&gt;&lt;p style='font-size: 14px; color: #7f8c8d;'&gt;¡Que aproveche! 😋&lt;/p&gt;&lt;/div&gt;&quot;, InName)]" Cc="{x:Null}" ConnectionId="fbebc4be-c9ed-4d64-bd7f-26cb812fef1b" ContinueOnError="{x:Null}" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="450,447" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" ReplyTo="{x:Null}" SaveAsDraft="False" SingleAttachment="{x:Null}" Subject="[InName]" To="[New String(){&quot;eliceomoreta@gmail.com&quot;,&quot;palango4887@gmail.com&quot;,&quot;mariannetorrealba@outlook.es&quot;}]" UseConnectionService="True">
       <uga:SendEmailConnections.AttachmentsBackup>
         <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
           <usau:BackupSlot.BackupValues>
@@ -151,7 +151,7 @@
         </usau:BackupSlot>
       </uga:SendEmailConnections.AttachmentsBackup>
       <uga:SendEmailConnections.InputTypeBackup>
-        <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="TEXT">
+        <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
           <usau:BackupSlot.BackupValues>
             <scg:List x:TypeArguments="x:Object" x:Key="HTML" Capacity="1">
               <InArgument x:TypeArguments="x:String" xml:space="preserve">[string.Format("&lt;P&gt;&lt;SPAN&gt;String.Format(&amp;quot;
@@ -173,6 +173,14 @@
  
 
 &amp;quot;, InName)&lt;/SPAN&gt;&lt;/P&gt;")]</InArgument>
+            </scg:List>
+            <scg:List x:TypeArguments="x:Object" x:Key="TEXT" Capacity="1">
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[String.Format("&lt;div style='font-family: Simple-Segoe, Arial; max-width: 600px; margin: 20px auto; padding: 20px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center;'&gt;
+  &lt;h1 style='color: #2c3e50; font-size: 32px; margin-bottom: 10px;'&gt;¡Tu receta está lista! 🍳&lt;/h1&gt;
+  &lt;p style='font-size: 18px; color: #555; margin: 15px 0;'&gt;Aquí tienes la receta completa de:&lt;/p&gt;
+  &lt;h2 style='font-size: 28px; color: #e74c3c; margin: 20px 0; font-weight: bold;'&gt;{0}&lt;/h2&gt;
+  &lt;p style='font-size: 16px; color: #7f8c8d;'&gt;¡Que aproveche! 😋&lt;/p&gt;
+&lt;/div&gt;", InName)]</InArgument>
             </scg:List>
           </usau:BackupSlot.BackupValues>
         </usau:BackupSlot>
