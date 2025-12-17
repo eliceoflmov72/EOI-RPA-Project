@@ -60,6 +60,7 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
       <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -125,9 +126,10 @@
       <AssemblyReference>NPOI.Core</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetDataFromWeb" sap:VirtualizedContainerService.HintSize="1048,1941" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetDataFromWeb" sap:VirtualizedContainerService.HintSize="958.8000000000001,1936.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="variable1" />
     </Sequence.Variables>
@@ -136,13 +138,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Nueva pestaña" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,1918" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="15342c43-f986-490d-bab4-7c9a73bd65df" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Nueva pestaña" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="451.2,1913.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="15342c43-f986-490d-bab4-7c9a73bd65df" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="450,1724" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="449.6,1720" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:String[]" Name="arrayCaracteristicas" />
               <Variable x:TypeArguments="x:String" Name="caracteristicas" />
@@ -155,7 +157,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en buscador" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,302" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" Text="[InReceta]" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en buscador" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,301.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" Text="[InReceta]" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="recetasgratis.net" CVScreenId="94cc45b2-d8da-4c54-ad73-f9d3bf98220e" ContentHash="GE4axCnK6UqPPn7DQUf2Yw" CvElementArea="660, 144, 175, 34" CvType="InputBox" DesignTimeRectangle="661, 145, 175, 34" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='q' tag='INPUT' /&gt;" Guid="b3751050-2b49-44d7-a567-638b86025cf3" InformativeScreenshot="888ffb79a78db3c9d9bfe8a35ab1c73e.png" Reference="olP_1sCdA0ucfGnOEerWrQ/F7Dt71UuLEi4YxsD-hW9sg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Recetas de cocina. +20.000 recetas fáciles paso a paso' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NTypeInto.Target>
@@ -170,7 +172,7 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Click en el botón de buscar" sap:VirtualizedContainerService.HintSize="416,191" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Click en el botón de buscar" sap:VirtualizedContainerService.HintSize="416,190.4" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="396bfdb8-4ca8-4124-977d-a805da8eea74" InformativeScreenshot="8cd69062e457ec9de83fdb4293303787" Selector="&lt;webctrl parentid='buscador' tag='SPAN' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -182,27 +184,27 @@
                 </ui:Target>
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <uix:NClick ActivateBefore="True" AlterIfDisabled="False" ClickType="Single" DisplayName="Seleccionar la primera receta" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" Version="V5">
+            <uix:NClick ActivateBefore="True" AlterIfDisabled="False" ClickType="Single" DisplayName="Seleccionar la primera receta" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,197.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="recetasgratis.net/busqueda" CVScreenId="3a2c5efe-aa57-4973-8aa7-4f37c2fbabef" ContentHash="pq5teqsE8kqThZEwrXZ-iA" CvTextArea="638, 288, 247, 16" CvTextArgument="Receta de Tortilla de zucchini" CvType="Text" DesignTimeRectangle="427, 286, 736, 23" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a' parentclass='resultado link' /&gt;" Guid="ebcae93c-0fb6-4940-a678-86ccd1bcb489" InformativeScreenshot="b73a0be87a7a31a9901789fa946b74e2.png" Reference="olP_1sCdA0ucfGnOEerWrQ/wM3qdlB07UW_32ojx574dw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resultados de tortilla - 875 recetas' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NGetText DisplayName="Obtener ingredientes" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,147" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" ScrapingOptions="None" TextString="[ingredientes]" Version="V5">
+            <uix:NGetText DisplayName="Obtener ingredientes" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,146.4" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" ScrapingOptions="None" TextString="[ingredientes]" Version="V5">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="recetasgratis.net/receta-de-sopa-de-hongos-77841.html" ContentHash="y7Tc2pPOo0SeqJnZ1GuFXg" DesignTimeRectangle="460, 514, 670, 350" ElementType="List" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='padding-left-0' tag='UL' /&gt;" Guid="79848c31-f5bc-4815-b62d-297369632e8f" InformativeScreenshot="43b069deac7a93c2b358009454855743.png" Reference="olP_1sCdA0ucfGnOEerWrQ/j2qUco5ja0ez3qxYA5vq2w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sopa de hongos - Receta FÁCIL' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <uix:NGetText DisplayName="Obtener características" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,147" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" TextString="[caracteristicas]" Version="V5">
+            <uix:NGetText DisplayName="Obtener características" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,146.4" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" TextString="[caracteristicas]" Version="V5">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="recetas.elperiodico.com/receta-de-tortilla-de-patatas-espanola-75075.html" ContentHash="dWWhsG_3Zk6NqRZCxPazPQ" DesignTimeRectangle="428, 288, 734, 51" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='properties' parentid='top' tag='DIV' /&gt;" Guid="9539524a-5e4f-4905-9de1-ae9805d4d9e7" InformativeScreenshot="a54114191f8c8b586f03d0f576217891.png" Reference="olP_1sCdA0ucfGnOEerWrQ/j1KhfNQMDUS_cc81OnssUA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tortilla de patatas - Receta ESPAÑOLA tradicional' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <uix:NGetText DisplayName="Obtener nombre receta" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,147" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" TextString="[OutNombre]" Version="V5">
+            <uix:NGetText DisplayName="Obtener nombre receta" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,146.4" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="15342c43-f986-490d-bab4-7c9a73bd65df" TextString="[OutNombre]" Version="V5">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="recetas.elperiodico.com/receta-de-tortilla-de-patatas-espanola-75075.html" CVScreenId="40a5f87a-17c5-461c-a097-6aec10815546" ContentHash="sHK2HQW180eZ7WEFmXME4Q" CvType="AnyWordGroup" DesignTimeRectangle="423, 514, 744, 44" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" Guid="9b065d34-8051-4ad8-980a-75e07990ea56" InformativeScreenshot="d3b8d7e9fd85ca4e7463f57498452090.png" Reference="olP_1sCdA0ucfGnOEerWrQ/ZqoDGexLr0aHookQouJGdg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tortilla de patatas - Receta ESPAÑOLA tradicional' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <Assign DisplayName="Establecer array de ingredientes" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign DisplayName="Establecer array de ingredientes" sap:VirtualizedContainerService.HintSize="416,178.4" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="s:String[]">[OutArrayIngredientes]</OutArgument>
               </Assign.To>

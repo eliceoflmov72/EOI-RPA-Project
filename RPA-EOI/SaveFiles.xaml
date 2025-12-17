@@ -147,7 +147,7 @@
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="excel" sap:VirtualizedContainerService.HintSize="925,5070" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence DisplayName="excel" sap:VirtualizedContainerService.HintSize="569.6,1782.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="relativePath" />
       <Variable x:TypeArguments="x:String" Name="path" />
@@ -174,7 +174,7 @@
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
     <ui:WriteTextFile FileName="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" File="[LocalResource.FromPath(&quot;html\\Receta.html&quot;)]" sap:VirtualizedContainerService.HintSize="570,176" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[html]" />
-    <Assign sap:VirtualizedContainerService.HintSize="570,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="569.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[path]</OutArgument>
       </Assign.To>
@@ -182,19 +182,19 @@
         <InArgument x:TypeArguments="x:String">["file:///" + System.IO.Path.Combine(Environment.CurrentDirectory, "html\Receta.html").Replace("\", "/")]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Receta de Fritos de atún" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="570,3512" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="a12050d1-717a-4ae1-91f4-706915206d68" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Receta de Fritos de atún" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="451.2,3466.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="a12050d1-717a-4ae1-91f4-706915206d68" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,3309" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,3296" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="416,127" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
+            <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="416,126.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
               <uix:NGoToUrl.Url>
                 <InArgument x:TypeArguments="x:String">
                   <VisualBasicValue x:TypeArguments="x:String" ExpressionText="path" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1">
@@ -205,7 +205,7 @@
                 </InArgument>
               </uix:NGoToUrl.Url>
             </uix:NGoToUrl>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="p" KeyModifiers="Ctrl">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,169.6" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="p" KeyModifiers="Ctrl">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="a8d7b4fe-2131-44c0-9e30-d804ec4921ef">
                   <ui:Target.TimeoutMS>
@@ -217,7 +217,7 @@
                 </ui:Target>
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'chrome.exe Receta de Ca…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'chrome.exe Receta de Ca…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,269.6" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="" ContentHash="Di6Hp4u2WES7mOMr8KFdwQ" DesignTimeRectangle="1341, 197, 238, 59" ElementVisibilityArgument="Interactive" Guid="7bdf84d9-54c0-4d82-8383-e265cb8efe8e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO4AAAA7CAYAAAB8Hba+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAYnSURBVHhe7Z1vbxs1HMf3dijrAK2A0DoxJrYhJB4gdX2A6EBopBtUDNgqYGsphVLK/oC6Bx0iqYBJ8Aaat5C+hjzPCzH63sWJ/bPvzpc6ae7yffBRFfvs8/l+H9vnRL0zL8zNK0JItTgjEwgh0w/FJaSCUFxCKgjFJaSCUFxCKgjFJaSCUFxCKsjI4l69+o76cGVFra2tqbt376n19XVCSA7wBL7AG/gjnSpDaXFxQpz8xo2P1NtXrqnzC6+puRfPOccRQmzgCXyBN/AHHo0qcClxl64vq0ZjVS1efNPJI4SUAx7BJ3gl84oIFheVY5Tg7EpIPOATvCorb5C4mM4xMlBaQuIDr+BXmWVzkLhYi3N5TMj4gF/wTKZnUSguRgFM5TKdEBIXeBY66xaKi61r7ILJdEJIXOAZfJPpPgrFxfSNLWyZTgiJCzwLXS4XiosvjbkpRcj4gWfwTab7KBQXv/iQaYSQ8RDqG8UlZIoI9S2auJcuX1HbOw/Vn3/9q5p//5fJ/kFLLV58yylPCAn3LZq4323+6EgqedZ6PpD3AuUlxCHUt2ji7j763RFVcuvzL9W3D7YH8nLmJcQm1Ldo4v7yaN8RVdK4/YWaO/uSerC1k3x+enCoLizyF1mEaEJ9m6i4q5/dSY49O/8y5SXEQ6hvpyIuoLyEuIT6NlFxsVQ2y0De+9//lOTt7P3m1DkShx3V6/Vsum21KY8bO1vqqNtTnUOZXn+ax6L/e6IffPeo11Pd9paoK+3D4uPqQ6hv0cTde/zUEVWyvftQffLpbYubt9bUH4fPk/KyzrKkAdNRTSsdN1+mTYLZFteSa6Otuqa8ENcZTFuq4wyys9eHob5NVNw89p6cTNzNdtcTDKfJ7AWdxhFX35/jVvrZKy5I+2xYdrr7cOXjm04cmyBfliki1LeaiJuO1iE3OJmVdQD1sYIKiKWcFYRJXkc19TGDcvayrttuOUFnLyG76mhD5+mATcvYeZL+zKQxBejPbN48Y3Br4q91bWad7rmTcln94SFTXN2eTHFl3nSLC5aWP3BiGSBdHhtCqG/xxH1yiuImARu2HA4Rt3ls1JXUbQSzIyzoS2uk6WAfBl1LdWS+CFCfNDapYKYUzbYhgyifXKshiG7ToPxggBqWk2XkZ18bJD5xrX7PE9e6l9MvLnj3vffVQfOfJI7xF5/lMaGE+lYPcX2BYM2aIjALxLURweMRZDAL55WTeAI0uw0p2e2US0wNJBu21X2c8JQz2yUHLY2vvw0ccWWf5ZW3zmmvYuS9nCYuXb6mHu8/S/7KvDKE+lYfcR1xNHbwhonrBowtrn0uV4hhHZa4cikrxHXFc+vzH5P1qGC3wW1nVhv77fJcq3OMB3dXWRxbKG61ZlzN/LlXnLSyhPpWD3GFnHl5heL25crcIPEEsyu+Wy5dphpt9ASoX0p/fTZZ1+9pQ1lxfYIFiJt7LVn1Om30tK/mhPpWE3H9QqZ4loviOLOsm18srjfNmgU9AVha3LxrzCrvufYy4sZaKksyy8uVg6d9NSfUt2ji/nrK4g52Rp2AELOR73nL3GwSEuoNnVxxPRs2ermoy9nSpQFZbqk8XA2YgVy4OWWIXlpcXYdVRsrlMpK4zkoHeNpXc0J9q5G4Ke7zlQwGccxxy5llzXznax2vuKA/cAyeiWXQmflddXRYfsZNkM/J5gysByFf3ojiAtmnRSIFiWu2M8HXp5721ZxQ32onLiFVJtS3aOKG/FY5D5SXdRIya4T6Fk3cr+7dd2Qsw52vv3HqJGTWCPUtmrgLr76hNrd3HSGLwP+o2vjhZ3V+4XWnTkJmjVDfoolLCDk5ob5RXEKmiFDfCsXlmwwImQxR32TAdwcRMhmivjuIb+sjZDJEfVsf349LyGSI+n5cwDfSEzJeor+RHmAUaDRWuUlFyBiAV/ArdLYFQeKCpevLyVROeQmJB3yCV/BL5uURLC5A5RgZuGwm5OTAI/hUVlpQSlyA6RxrcYwS2AXDFjZnYUKKgSfwBd7AH3hUZnlsUlpcDU6IrWucHF8a4xcfhJBs4Al8gTejCqsZWVxCyOlBcQmpIBSXkApCcQmpIBSXkApCcQmpIP8Du8sV7QWHtbEAAAAASUVORK5CYII=" InformativeScreenshot="a78413d2f53d1aa0fc300200a68f04de.png" Reference="olP_1sCdA0ucfGnOEerWrQ/M9h77QdIZE6vhm5vHBDoow" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V6" WaitForReadyArgument="None" />
               </uix:NClick.Target>
@@ -235,9 +235,15 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'chrome.exe'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'chrome.exe'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,269.6" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="" ContentHash="AZ7Fic9OP0qRvd-IXh_WFg" DesignTimeRectangle="1, 31, 238, 31" ElementVisibilityArgument="Interactive" Guid="f3e91275-93b0-4a51-9b4d-41eb14eced40" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO4AAAAfCAYAAADgIPGeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMdSURBVHhe7ZnNcdswEEbVjj1OBSxCJ9+lBnRSAbpw1IFvOmRycAGuwUwnriIzyIAgyP0DCdpKoo2+w5uMCSy0BPcBILP5/v4r/PgZAACO2EBcAPwBcQFwCMQFwCEQFwCHQFwAHAJxAXAIxAXAIRAXAIdAXAAc4kvcyyk0TcN5fg0vst8f5yMcn5uwu8jr/z/tQcx/I+bBekZNE7bnDzFWmsPlfsDCjbipYE6hZdfjw5fX/gb3LS6T6+01bKm8UVy1mHZhpxbZ+53Da+BC3Jfz3iiGf8n9Fp0SNz+fQ5f+NsWNpDmbYu93Dq+BA3HTal3zgPtdORfQACuqiDjKsSLs206hzX3GOH6s2547VXT8CLkPx7fclgs2xfA2ybAzZagAw85mtpHFrY3/snujY+rf7uNK82FQFDfnUxRXtkHcr3D74vYFW3ccrhG3PZCx+rFJMSthI4O05Fou9qnourCT7aJALWk4STAqRXsmMoj4/l6JIDmnMX5coKY4GSP/tnKQWOKyeZ8Tlz1LiPsVbl9cqxDYrikKc0FcjigeQ5BxF56LkxgFWs4hUc5THjEzUbIpV/06YcTRvOSilbHmm6DElXM2F89+k59i5LME8/gQV4mT4cVbJ64uGC4u/y0txDQGE1ceZYW4Wjw9nt2n9KrAc9B5lnIc8jLuVfUx0F+VRd9FcbHjXoPbF1fIOde2KO4gV/EDiVHMWnwdl46pJEejQG0p7fE4pfs3clgrriVYhbiz91IaV+Vo5AeqcSCuLWTCOC6KfjRWty+La15ju6BRgKvFnbvHUrxx72vEvdZRWVKMlycHIz9QjQtxxy+jqiDEbmS9b9GPTULC/EFnVlzjg00+LuY4Ll0qyHVH5ek0QAt58eMUEX21uHkMFiPl0nxKXHXSiRj5gWqciJvQ71eyGESfQ6d2Wdqu/lvHFDcyLBzjO7EsOtq+D8fL+h23R74n0x04L0JW2yfFjcg5XRKpSlyaZ481p0Z+oBpX4gIAEhAXAIdAXAAcAnEBcAjEBcAhEBcAh0BcABwCcQFwCMQFwCGbh8en8PD4DQDgiN+tRTRqTLxSKgAAAABJRU5ErkJggg==" InformativeScreenshot="64c59864c7e57e12e76204f42d7d7a47.png" Reference="olP_1sCdA0ucfGnOEerWrQ/JaNzg4W2hUCyMHvKQe0xsg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V6" WaitForReadyArgument="Interactive" />
+                <uix:TargetAnchorable BrowserURL="" CVScreenId="7b8bf39e-a9d4-4ea2-9c15-a23fae59c848" CvElementArea="1406, 163, 195, 40" CvType="InputBox" DesignTimeRectangle="1406, 163, 195, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" Guid="fc046a29-83fa-4bf6-ac75-5308c85f125f" InformativeScreenshot="7d9b4b0272c36dde6222042fcdba9963.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Receta de Tortilla de zucchini' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="7b8bf39e-a9d4-4ea2-9c15-a23fae59c848" CvTextArea="1438, 177, 102, 12" CvTextArgument="Guardar como PDF" CvType="Text" DesignTimeRectangle="1438, 177, 103, 12" ElementType="Text" Guid="e48f2a0d-9041-4f91-9cd2-46836b830633" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
               </uix:NClick.Target>
               <uix:NClick.VerifyOptions>
                 <uix:VerifyExecutionOptions DisplayName="Verification target" Mode="Disappears">
@@ -253,7 +259,7 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="SendHotkey_9" Key="tab" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,169.6" sap2010:WorkflowViewState.IdRef="SendHotkey_9" Key="tab" KeyModifiers="None" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5f3e4826-4011-4352-9dba-ddd04dcbb287">
                   <ui:Target.TimeoutMS>
@@ -265,7 +271,7 @@
                 </ui:Target>
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="SendHotkey_11" Key="tab" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,169.6" sap2010:WorkflowViewState.IdRef="SendHotkey_11" Key="tab" KeyModifiers="None" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5f3e4826-4011-4352-9dba-ddd04dcbb287">
                   <ui:Target.TimeoutMS>
@@ -277,7 +283,7 @@
                 </ui:Target>
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="SendHotkey_12" Key="tab" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,169.6" sap2010:WorkflowViewState.IdRef="SendHotkey_12" Key="tab" KeyModifiers="None" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5f3e4826-4011-4352-9dba-ddd04dcbb287">
                   <ui:Target.TimeoutMS>
@@ -289,7 +295,7 @@
                 </ui:Target>
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="SendHotkey_13" Key="tab" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,169.6" sap2010:WorkflowViewState.IdRef="SendHotkey_13" Key="tab" KeyModifiers="None" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5f3e4826-4011-4352-9dba-ddd04dcbb287">
                   <ui:Target.TimeoutMS>
@@ -301,7 +307,7 @@
                 </ui:Target>
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="SendHotkey_14" Key="enter" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,169.6" sap2010:WorkflowViewState.IdRef="SendHotkey_14" Key="enter" KeyModifiers="None" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5f3e4826-4011-4352-9dba-ddd04dcbb287">
                   <ui:Target.TimeoutMS>
@@ -313,7 +319,7 @@
                 </ui:Target>
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <Assign sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign sap:VirtualizedContainerService.HintSize="416,178.4" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[relativePath]</OutArgument>
               </Assign.To>
@@ -321,7 +327,7 @@
                 <InArgument x:TypeArguments="x:String">[System.IO.Path.Combine(Environment.CurrentDirectory, "pdf")]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'dialog  Guardar como'" sap:VirtualizedContainerService.HintSize="416,191" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="l" KeyModifiers="Ctrl">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'dialog  Guardar como'" sap:VirtualizedContainerService.HintSize="416,190.4" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="l" KeyModifiers="Ctrl">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="58dc89c0-3d6d-4db9-a6f6-466f809d6354" InformativeScreenshot="e81e913c72f496ab2276fc6f6ad7ac6a" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;&lt;ctrl name='Guardar como' role='dialog' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -333,19 +339,22 @@
                 </ui:Target>
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Dirección Descargas'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,302" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Text="[relativePath]" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Dirección Descargas'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,301.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Text="[relativePath]" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="" CVScreenId="2752dcba-8300-42c2-abe5-923a95021c4e" ContentHash="ZlDdy7azCUai9BMMeZ17xw" CvTextArea="235, 61, 66, 17" CvTextArgument="Imágenes" CvType="Text" DesignTimeRectangle="180, 38, 689, 62" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl idx='6' role='client' /&gt;" Guid="29d89bc3-7b9b-4b95-9e61-158d5a2d944d" InformativeScreenshot="d0fb9f500164056c46ad20130c6bec4e.png" Reference="olP_1sCdA0ucfGnOEerWrQ/IRABZgedNUqsPeoF3olC4w" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector, CV" SelectionStrategy="AA" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NTypeInto.Target>
               <uix:NTypeInto.VerifyOptions>
                 <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
                   <uix:VerifyExecutionTypeIntoOptions.Timeout>
                     <InArgument x:TypeArguments="x:Double" />
                   </uix:VerifyExecutionTypeIntoOptions.Timeout>
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'dialog  Guardar como'" sap:VirtualizedContainerService.HintSize="416,191" sap2010:WorkflowViewState.IdRef="SendHotkey_20" Key="enter" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'dialog  Guardar como'" sap:VirtualizedContainerService.HintSize="416,190.4" sap2010:WorkflowViewState.IdRef="SendHotkey_20" Key="enter" KeyModifiers="None" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="02b6bd33-1a36-4091-9792-23a40d62412a" InformativeScreenshot="d6376faac51dad76e5cd010ecbf77fcd" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;&lt;ctrl name='Guardar como' role='dialog' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -357,7 +366,7 @@
                 </ui:Target>
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Receta de Fritos de atú…'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,302" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Text="Receta.pdf" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Receta de Fritos de atú…'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,301.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Text="Receta.pdf" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="" ContentHash="8mL4qeL_KkOv3sqQ1mQALQ" DesignTimeRectangle="169, 408, 752, 22" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="e9f2b0c3-9b67-4714-8d41-85880e993820" InformativeScreenshot="7cb4a165939da7f9d82352fae147d59c.png" Reference="olP_1sCdA0ucfGnOEerWrQ/oAMbwpMhl0aDevu7Eo733Q" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NTypeInto.Target>
@@ -372,12 +381,12 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Guardar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Guardar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,197.6" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable ContentHash="fvxNG4jFO0eg-TBrtWyXEw" DesignTimeRectangle="696, 540, 110, 33" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' /&gt;" Guid="0e029477-2b08-422d-8b57-95086b6543d0" InformativeScreenshot="65c7c264045924421d63d02633e15ec8.png" Reference="olP_1sCdA0ucfGnOEerWrQ/6ffPJWCnAkSQLnKrfm612g" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Sí'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NClick_22" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Sí'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,188.8" sap2010:WorkflowViewState.IdRef="NClick_22" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="" CVScreenId="9b68a172-7dc2-4d45-a364-f1680cc22fa1" ContentHash="hRuUeBkBk0uXSOCpRKscfg" CvElementArea="253, 126, 87, 29" CvTextArea="289, 132, 15, 15" CvTextArgument="Sí" CvType="Button" DesignTimeRectangle="254, 127, 87, 29" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Confirmar Guardar como' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Sí' cls='Button' title='&amp;amp;Sí' /&gt;" Guid="bdbe5d4d-f843-44ef-bc98-b84093d7d9f3" InformativeScreenshot="3f4a7317df96e69acd186391becb4bb6.png" Reference="olP_1sCdA0ucfGnOEerWrQ/1mJ16q1Ldk6Mo9BrNNXrCQ" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Confirmar Guardar como' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
