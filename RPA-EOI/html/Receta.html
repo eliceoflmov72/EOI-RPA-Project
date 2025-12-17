@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Receta de Pollada con arroz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f8f9fa;
+            background-image: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 35px,
+                rgba(66, 133, 244, 0.02) 35px,
+                rgba(66, 133, 244, 0.02) 70px
+            );
+            min-height: 100vh;
+            padding: 24px;
+        }
+        
+        .title-container {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .logo {
+            width: 48px;
+            height: 48px;
+            background: #e8f0fe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 48px;
+            border-radius: 24px;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+        }
+        
+        h1 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 48px;
+            color: #202124;
+            margin: 0;
+            font-weight: 500;
+            line-height: 1.25;
+        }
+        
+        .descripcion {
+            font-size: 16px;
+            color: #5f6368;
+            margin: 16px 0 40px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #e8f0fe;
+        }
+        
+        .section-icon {
+            width: 32px;
+            height: 32px;
+            background: #e8f0fe;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        h2 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 24px;
+            color: #202124;
+            font-weight: 500;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid #dadce0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        th {
+            background: #f8f9fa;
+            color: #5f6368;
+            padding: 16px 24px;
+            font-family: 'Google Sans', sans-serif;
+            font-size: 14px;
+            text-align: left;
+            font-weight: 500;
+            letter-spacing: 0.25px;
+            border-bottom: 1px solid #dadce0;
+        }
+        
+        td {
+            padding: 16px 24px;
+            font-size: 14px;
+            color: #202124;
+            border-bottom: 1px solid #f1f3f4;
+            transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        tbody tr {
+            background: white;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .cantidad {
+            font-weight: 500;
+            color: #1a73e8;
+            font-family: 'Google Sans', sans-serif;
+        }
+        
+        .color-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+        
+        .color-dot-blue { background: #4285f4; }
+        .color-dot-red { background: #ea4335; }
+        .color-dot-yellow { background: #fbbc04; }
+        .color-dot-green { background: #34a853; }
+        
+        @media print {
+            body {
+                background: white;
+                background-image: none;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            table {
+                border: none;
+                box-shadow: none;
+            }
+            
+            th {
+                border-bottom: none;
+            }
+            
+            td {
+                border-bottom: none;
+            }
+            
+            .section-header {
+                border-bottom: none;
+            }
+            
+            @page {
+                margin: 1.5cm;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 16px;
+            }
+            
+            .title-container {
+                gap: 12px;
+            }
+            
+            .logo {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+            
+            .container {
+                padding: 24px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            th, td {
+                padding: 12px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <div class='title-container'>
+            <div class='logo'>📖</div>
+            <h1>Receta de Pollada con arroz</h1>
+        </div>
+        <p class='descripcion'>4 comensales, 45m, Dificultad baja</p>
+        <div class='section-header'>
+            <h2>Ingredientes</h2>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingrediente</th>
+                    <th style='text-align: right;'>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class='color-dot color-dot-blue'></span>piezas de pollo</td>
+                    <td class='cantidad' style='text-align: right;'>4</td>
+                </tr>
+                <tr>
+                    <td><span class='color-dot color-dot-red'></span>cucharadas soperas de ají panca en pasta</td>
+                    <td class='cantidad' style='text-align: right;'>5</td>
+                </tr>
+                <tr>
+                    <td><span class='color-dot color-dot-yellow'></span>cucharadas soperas de ajo molido</td>
+                    <td class='cantidad' style='text-align: right;'>3</td>
+                </tr>
+                <tr>
+                    <td><span class='color-dot color-dot-green'></span>cucharadita de comino molido</td>
+                    <td class='cantidad' style='text-align: right;'>1</td>
+                </tr>
+                <tr>
+                    <td><span class='color-dot color-dot-blue'></span>cucharadita de pimienta negra molida</td>
+                    <td class='cantidad' style='text-align: right;'>1</td>
+                </tr>
+                <tr>
+                    <td><span class='color-dot color-dot-red'></span>cucharadita de orégano seco molido</td>
+                    <td class='cantidad' style='text-align: right;'>1</td>
+                </tr>
+                <tr>
+                    <td><span class='color-dot color-dot-yellow'></span>cucharadas soperas de mostaza</td>
+                    <td class='cantidad' style='text-align: right;'>2</td>
+                </tr>
+                <tr>
+                    <td><span class='color-dot color-dot-green'></span>mililitros de vinagre tinto</td>
+                    <td class='cantidad' style='text-align: right;'>100</td>
+                </tr>
+                <tr>
+                    <td><span class='color-dot color-dot-blue'></span>mililitros de sillao</td>
+                    <td class='cantidad' style='text-align: right;'>100</td>
+                </tr>
+                <tr>
+                    <td><span class='color-dot color-dot-red'></span>cucharaditas de sal</td>
+                    <td class='cantidad' style='text-align: right;'>3</td>
+                </tr>
+                <tr>
+                    <td><span class='color-dot color-dot-yellow'></span>aceite c/n</td>
+                    <td class='cantidad' style='text-align: right;'></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

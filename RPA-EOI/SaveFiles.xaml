@@ -1,0 +1,440 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="excel" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="InDataTableIngredientes" Type="InArgument(sd:DataTable)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>excel_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.Platform</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="excel" sap:VirtualizedContainerService.HintSize="925,5070" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="relativePath" />
+      <Variable x:TypeArguments="x:String" Name="path" />
+      <Variable x:TypeArguments="x:String" Name="html" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:DeleteFileX DisplayName="Borramos el excel" sap:VirtualizedContainerService.HintSize="570,113" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="excel\Receta.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:DeleteFileX>
+    <ui:WriteRange WorkbookPathResource="{x:Null}" DataTable="[InDataTableIngredientes]" DisplayName="Sobrescribimos excel" sap:VirtualizedContainerService.HintSize="570,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Hoja1" StartingCell="A1" WorkbookPath="excel\Receta.xlsx" />
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim sb As New System.Text.StringBuilder()&#xA;&#xA;' Valores únicos (todas las filas comparten el mismo nombre y características)&#xA;Dim nombreReceta As String = dt.Rows(0)(&quot;nombre&quot;).ToString().Trim()&#xA;Dim caracteristicas As String = dt.Rows(0)(&quot;caracteristicas&quot;).ToString().Trim()&#xA;&#xA;sb.AppendLine(&quot;&lt;!DOCTYPE html&gt;&quot;)&#xA;sb.AppendLine(&quot;&lt;html lang='es'&gt;&quot;)&#xA;sb.AppendLine(&quot;&lt;head&gt;&quot;)&#xA;sb.AppendLine(&quot;    &lt;meta charset='utf-8'&gt;&quot;)&#xA;sb.AppendLine(&quot;    &lt;meta name='viewport' content='width=device-width, initial-scale=1.0'&gt;&quot;)&#xA;sb.AppendLine(&quot;    &lt;title&gt;&quot; &amp; nombreReceta &amp; &quot;&lt;/title&gt;&quot;)&#xA;sb.AppendLine(&quot;    &lt;style&gt;&quot;)&#xA;sb.AppendLine(&quot;        @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&amp;family=Roboto:wght@300;400;500&amp;display=swap');&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        * {&quot;)&#xA;sb.AppendLine(&quot;            margin: 0;&quot;)&#xA;sb.AppendLine(&quot;            padding: 0;&quot;)&#xA;sb.AppendLine(&quot;            box-sizing: border-box;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        body {&quot;)&#xA;sb.AppendLine(&quot;            font-family: 'Roboto', sans-serif;&quot;)&#xA;sb.AppendLine(&quot;            background: #f8f9fa;&quot;)&#xA;sb.AppendLine(&quot;            background-image: repeating-linear-gradient(&quot;)&#xA;sb.AppendLine(&quot;                45deg,&quot;)&#xA;sb.AppendLine(&quot;                transparent,&quot;)&#xA;sb.AppendLine(&quot;                transparent 35px,&quot;)&#xA;sb.AppendLine(&quot;                rgba(66, 133, 244, 0.02) 35px,&quot;)&#xA;sb.AppendLine(&quot;                rgba(66, 133, 244, 0.02) 70px&quot;)&#xA;sb.AppendLine(&quot;            );&quot;)&#xA;sb.AppendLine(&quot;            min-height: 100vh;&quot;)&#xA;sb.AppendLine(&quot;            padding: 24px;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        .title-container {&quot;)&#xA;sb.AppendLine(&quot;            display: flex;&quot;)&#xA;sb.AppendLine(&quot;            align-items: center;&quot;)&#xA;sb.AppendLine(&quot;            gap: 16px;&quot;)&#xA;sb.AppendLine(&quot;            margin-bottom: 8px;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        .logo {&quot;)&#xA;sb.AppendLine(&quot;            width: 48px;&quot;)&#xA;sb.AppendLine(&quot;            height: 48px;&quot;)&#xA;sb.AppendLine(&quot;            background: #e8f0fe;&quot;)&#xA;sb.AppendLine(&quot;            border-radius: 50%;&quot;)&#xA;sb.AppendLine(&quot;            display: flex;&quot;)&#xA;sb.AppendLine(&quot;            align-items: center;&quot;)&#xA;sb.AppendLine(&quot;            justify-content: center;&quot;)&#xA;sb.AppendLine(&quot;            font-size: 24px;&quot;)&#xA;sb.AppendLine(&quot;            flex-shrink: 0;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        .container {&quot;)&#xA;sb.AppendLine(&quot;            max-width: 900px;&quot;)&#xA;sb.AppendLine(&quot;            margin: 0 auto;&quot;)&#xA;sb.AppendLine(&quot;            background: white;&quot;)&#xA;sb.AppendLine(&quot;            padding: 48px;&quot;)&#xA;sb.AppendLine(&quot;            border-radius: 24px;&quot;)&#xA;sb.AppendLine(&quot;            box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        h1 {&quot;)&#xA;sb.AppendLine(&quot;            font-family: 'Google Sans', sans-serif;&quot;)&#xA;sb.AppendLine(&quot;            font-size: 48px;&quot;)&#xA;sb.AppendLine(&quot;            color: #202124;&quot;)&#xA;sb.AppendLine(&quot;            margin: 0;&quot;)&#xA;sb.AppendLine(&quot;            font-weight: 500;&quot;)&#xA;sb.AppendLine(&quot;            line-height: 1.25;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        .descripcion {&quot;)&#xA;sb.AppendLine(&quot;            font-size: 16px;&quot;)&#xA;sb.AppendLine(&quot;            color: #5f6368;&quot;)&#xA;sb.AppendLine(&quot;            margin: 16px 0 40px;&quot;)&#xA;sb.AppendLine(&quot;            line-height: 1.6;&quot;)&#xA;sb.AppendLine(&quot;            font-weight: 400;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        .section-header {&quot;)&#xA;sb.AppendLine(&quot;            display: flex;&quot;)&#xA;sb.AppendLine(&quot;            align-items: center;&quot;)&#xA;sb.AppendLine(&quot;            gap: 12px;&quot;)&#xA;sb.AppendLine(&quot;            margin-bottom: 24px;&quot;)&#xA;sb.AppendLine(&quot;            padding-bottom: 16px;&quot;)&#xA;sb.AppendLine(&quot;            border-bottom: 2px solid #e8f0fe;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        .section-icon {&quot;)&#xA;sb.AppendLine(&quot;            width: 32px;&quot;)&#xA;sb.AppendLine(&quot;            height: 32px;&quot;)&#xA;sb.AppendLine(&quot;            background: #e8f0fe;&quot;)&#xA;sb.AppendLine(&quot;            border-radius: 8px;&quot;)&#xA;sb.AppendLine(&quot;            display: flex;&quot;)&#xA;sb.AppendLine(&quot;            align-items: center;&quot;)&#xA;sb.AppendLine(&quot;            justify-content: center;&quot;)&#xA;sb.AppendLine(&quot;            font-size: 18px;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        h2 {&quot;)&#xA;sb.AppendLine(&quot;            font-family: 'Google Sans', sans-serif;&quot;)&#xA;sb.AppendLine(&quot;            font-size: 24px;&quot;)&#xA;sb.AppendLine(&quot;            color: #202124;&quot;)&#xA;sb.AppendLine(&quot;            font-weight: 500;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        table {&quot;)&#xA;sb.AppendLine(&quot;            width: 100%;&quot;)&#xA;sb.AppendLine(&quot;            border-collapse: separate;&quot;)&#xA;sb.AppendLine(&quot;            border-spacing: 0;&quot;)&#xA;sb.AppendLine(&quot;            border: 1px solid #dadce0;&quot;)&#xA;sb.AppendLine(&quot;            border-radius: 12px;&quot;)&#xA;sb.AppendLine(&quot;            overflow: hidden;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        th {&quot;)&#xA;sb.AppendLine(&quot;            background: #f8f9fa;&quot;)&#xA;sb.AppendLine(&quot;            color: #5f6368;&quot;)&#xA;sb.AppendLine(&quot;            padding: 16px 24px;&quot;)&#xA;sb.AppendLine(&quot;            font-family: 'Google Sans', sans-serif;&quot;)&#xA;sb.AppendLine(&quot;            font-size: 14px;&quot;)&#xA;sb.AppendLine(&quot;            text-align: left;&quot;)&#xA;sb.AppendLine(&quot;            font-weight: 500;&quot;)&#xA;sb.AppendLine(&quot;            letter-spacing: 0.25px;&quot;)&#xA;sb.AppendLine(&quot;            border-bottom: 1px solid #dadce0;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        td {&quot;)&#xA;sb.AppendLine(&quot;            padding: 16px 24px;&quot;)&#xA;sb.AppendLine(&quot;            font-size: 14px;&quot;)&#xA;sb.AppendLine(&quot;            color: #202124;&quot;)&#xA;sb.AppendLine(&quot;            border-bottom: 1px solid #f1f3f4;&quot;)&#xA;sb.AppendLine(&quot;            transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        tbody tr {&quot;)&#xA;sb.AppendLine(&quot;            background: white;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        tbody tr:hover {&quot;)&#xA;sb.AppendLine(&quot;            background: #f8f9fa;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        tbody tr:last-child td {&quot;)&#xA;sb.AppendLine(&quot;            border-bottom: none;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        .cantidad {&quot;)&#xA;sb.AppendLine(&quot;            font-weight: 500;&quot;)&#xA;sb.AppendLine(&quot;            color: #1a73e8;&quot;)&#xA;sb.AppendLine(&quot;            font-family: 'Google Sans', sans-serif;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        .color-dot {&quot;)&#xA;sb.AppendLine(&quot;            display: inline-block;&quot;)&#xA;sb.AppendLine(&quot;            width: 8px;&quot;)&#xA;sb.AppendLine(&quot;            height: 8px;&quot;)&#xA;sb.AppendLine(&quot;            border-radius: 50%;&quot;)&#xA;sb.AppendLine(&quot;            margin-right: 12px;&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        .color-dot-blue { background: #4285f4; }&quot;)&#xA;sb.AppendLine(&quot;        .color-dot-red { background: #ea4335; }&quot;)&#xA;sb.AppendLine(&quot;        .color-dot-yellow { background: #fbbc04; }&quot;)&#xA;sb.AppendLine(&quot;        .color-dot-green { background: #34a853; }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        @media print {&quot;)&#xA;sb.AppendLine(&quot;            body {&quot;)&#xA;sb.AppendLine(&quot;                background: white;&quot;)&#xA;sb.AppendLine(&quot;                background-image: none;&quot;)&#xA;sb.AppendLine(&quot;            }&quot;)&#xA;sb.AppendLine(&quot;            &quot;)&#xA;sb.AppendLine(&quot;            .container {&quot;)&#xA;sb.AppendLine(&quot;                box-shadow: none;&quot;)&#xA;sb.AppendLine(&quot;                border-radius: 0;&quot;)&#xA;sb.AppendLine(&quot;            }&quot;)&#xA;sb.AppendLine(&quot;            &quot;)&#xA;sb.AppendLine(&quot;            table {&quot;)&#xA;sb.AppendLine(&quot;                border: none;&quot;)&#xA;sb.AppendLine(&quot;                box-shadow: none;&quot;)&#xA;sb.AppendLine(&quot;            }&quot;)&#xA;sb.AppendLine(&quot;            &quot;)&#xA;sb.AppendLine(&quot;            th {&quot;)&#xA;sb.AppendLine(&quot;                border-bottom: none;&quot;)&#xA;sb.AppendLine(&quot;            }&quot;)&#xA;sb.AppendLine(&quot;            &quot;)&#xA;sb.AppendLine(&quot;            td {&quot;)&#xA;sb.AppendLine(&quot;                border-bottom: none;&quot;)&#xA;sb.AppendLine(&quot;            }&quot;)&#xA;sb.AppendLine(&quot;            &quot;)&#xA;sb.AppendLine(&quot;            .section-header {&quot;)&#xA;sb.AppendLine(&quot;                border-bottom: none;&quot;)&#xA;sb.AppendLine(&quot;            }&quot;)&#xA;sb.AppendLine(&quot;            &quot;)&#xA;sb.AppendLine(&quot;            @page {&quot;)&#xA;sb.AppendLine(&quot;                margin: 1.5cm;&quot;)&#xA;sb.AppendLine(&quot;            }&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;        &quot;)&#xA;sb.AppendLine(&quot;        @media (max-width: 768px) {&quot;)&#xA;sb.AppendLine(&quot;            body {&quot;)&#xA;sb.AppendLine(&quot;                padding: 16px;&quot;)&#xA;sb.AppendLine(&quot;            }&quot;)&#xA;sb.AppendLine(&quot;            &quot;)&#xA;sb.AppendLine(&quot;            .title-container {&quot;)&#xA;sb.AppendLine(&quot;                gap: 12px;&quot;)&#xA;sb.AppendLine(&quot;            }&quot;)&#xA;sb.AppendLine(&quot;            &quot;)&#xA;sb.AppendLine(&quot;            .logo {&quot;)&#xA;sb.AppendLine(&quot;                width: 40px;&quot;)&#xA;sb.AppendLine(&quot;                height: 40px;&quot;)&#xA;sb.AppendLine(&quot;                font-size: 20px;&quot;)&#xA;sb.AppendLine(&quot;            }&quot;)&#xA;sb.AppendLine(&quot;            &quot;)&#xA;sb.AppendLine(&quot;            .container {&quot;)&#xA;sb.AppendLine(&quot;                padding: 24px;&quot;)&#xA;sb.AppendLine(&quot;            }&quot;)&#xA;sb.AppendLine(&quot;            &quot;)&#xA;sb.AppendLine(&quot;            h1 {&quot;)&#xA;sb.AppendLine(&quot;                font-size: 32px;&quot;)&#xA;sb.AppendLine(&quot;            }&quot;)&#xA;sb.AppendLine(&quot;            &quot;)&#xA;sb.AppendLine(&quot;            th, td {&quot;)&#xA;sb.AppendLine(&quot;                padding: 12px 16px;&quot;)&#xA;sb.AppendLine(&quot;            }&quot;)&#xA;sb.AppendLine(&quot;        }&quot;)&#xA;sb.AppendLine(&quot;    &lt;/style&gt;&quot;)&#xA;sb.AppendLine(&quot;&lt;/head&gt;&quot;)&#xA;sb.AppendLine(&quot;&lt;body&gt;&quot;)&#xA;sb.AppendLine(&quot;    &lt;div class='container'&gt;&quot;)&#xA;sb.AppendLine(&quot;        &lt;div class='title-container'&gt;&quot;)&#xA;sb.AppendLine(&quot;            &lt;div class='logo'&gt;📖&lt;/div&gt;&quot;)&#xA;sb.AppendLine(&quot;            &lt;h1&gt;&quot; &amp; System.Security.SecurityElement.Escape(nombreReceta) &amp; &quot;&lt;/h1&gt;&quot;)&#xA;sb.AppendLine(&quot;        &lt;/div&gt;&quot;)&#xA;sb.AppendLine(&quot;        &lt;p class='descripcion'&gt;&quot; &amp; System.Security.SecurityElement.Escape(caracteristicas) &amp; &quot;&lt;/p&gt;&quot;)&#xA;sb.AppendLine(&quot;        &lt;div class='section-header'&gt;&quot;)&#xA;sb.AppendLine(&quot;            &lt;h2&gt;Ingredientes&lt;/h2&gt;&quot;)&#xA;sb.AppendLine(&quot;        &lt;/div&gt;&quot;)&#xA;sb.AppendLine(&quot;        &lt;table&gt;&quot;)&#xA;sb.AppendLine(&quot;            &lt;thead&gt;&quot;)&#xA;sb.AppendLine(&quot;                &lt;tr&gt;&quot;)&#xA;sb.AppendLine(&quot;                    &lt;th&gt;Ingrediente&lt;/th&gt;&quot;)&#xA;sb.AppendLine(&quot;                    &lt;th style='text-align: right;'&gt;Cantidad&lt;/th&gt;&quot;)&#xA;sb.AppendLine(&quot;                &lt;/tr&gt;&quot;)&#xA;sb.AppendLine(&quot;            &lt;/thead&gt;&quot;)&#xA;sb.AppendLine(&quot;            &lt;tbody&gt;&quot;)&#xA;&#xA;Dim colorIndex As Integer = 0&#xA;Dim colors() As String = {&quot;blue&quot;, &quot;red&quot;, &quot;yellow&quot;, &quot;green&quot;}&#xA;&#xA;For Each row As DataRow In dt.Rows&#xA;    Dim ingrediente As String = row(&quot;ingrediente&quot;).ToString().Trim()&#xA;    Dim cantidad As String = row(&quot;cantidad&quot;).ToString().Trim()&#xA;    Dim colorClass As String = colors(colorIndex Mod 4)&#xA;    sb.AppendLine(&quot;                &lt;tr&gt;&quot;)&#xA;    sb.AppendLine(&quot;                    &lt;td&gt;&lt;span class='color-dot color-dot-&quot; &amp; colorClass &amp; &quot;'&gt;&lt;/span&gt;&quot; &amp; System.Security.SecurityElement.Escape(ingrediente) &amp; &quot;&lt;/td&gt;&quot;)&#xA;    sb.AppendLine(&quot;                    &lt;td class='cantidad' style='text-align: right;'&gt;&quot; &amp; System.Security.SecurityElement.Escape(cantidad) &amp; &quot;&lt;/td&gt;&quot;)&#xA;    sb.AppendLine(&quot;                &lt;/tr&gt;&quot;)&#xA;    colorIndex = colorIndex + 1&#xA;Next&#xA;&#xA;sb.AppendLine(&quot;            &lt;/tbody&gt;&quot;)&#xA;sb.AppendLine(&quot;        &lt;/table&gt;&quot;)&#xA;sb.AppendLine(&quot;    &lt;/div&gt;&quot;)&#xA;sb.AppendLine(&quot;&lt;/body&gt;&quot;)&#xA;sb.AppendLine(&quot;&lt;/html&gt;&quot;)&#xA;&#xA;html = sb.ToString()" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="570,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="dt">[InDataTableIngredientes]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="html">[html]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:WriteTextFile FileName="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" File="[LocalResource.FromPath(&quot;html\\Receta.html&quot;)]" sap:VirtualizedContainerService.HintSize="570,176" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[html]" />
+    <Assign sap:VirtualizedContainerService.HintSize="570,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[path]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["file:///" + System.IO.Path.Combine(Environment.CurrentDirectory, "html\Receta.html").Replace("\", "/")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Receta de Fritos de atún" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="570,3512" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="a12050d1-717a-4ae1-91f4-706915206d68" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,3309" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="416,127" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
+              <uix:NGoToUrl.Url>
+                <InArgument x:TypeArguments="x:String">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="path" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1">
+                    <VisualBasicValue.Result>
+                      <OutArgument x:TypeArguments="x:String" />
+                    </VisualBasicValue.Result>
+                  </VisualBasicValue>
+                </InArgument>
+              </uix:NGoToUrl.Url>
+            </uix:NGoToUrl>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="p" KeyModifiers="Ctrl">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="a8d7b4fe-2131-44c0-9e30-d804ec4921ef">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'chrome.exe Receta de Ca…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="" ContentHash="Di6Hp4u2WES7mOMr8KFdwQ" DesignTimeRectangle="1341, 197, 238, 59" ElementVisibilityArgument="Interactive" Guid="7bdf84d9-54c0-4d82-8383-e265cb8efe8e" ImageBase64="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" InformativeScreenshot="a78413d2f53d1aa0fc300200a68f04de.png" Reference="olP_1sCdA0ucfGnOEerWrQ/M9h77QdIZE6vhm5vHBDoow" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V6" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Verification target" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="" ContentHash="wNdPj9d8kkWUBos-f8whmA" DesignTimeRectangle="0, 0, 220, 93" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;" Guid="c286d361-44f5-4d70-97b3-f14820470f60" InformativeScreenshot="81b13c9beb70106b4b69fad510976d96.png" Reference="olP_1sCdA0ucfGnOEerWrQ/OQqBq9dxmkmen7ODGxe1JA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'chrome.exe'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="" ContentHash="AZ7Fic9OP0qRvd-IXh_WFg" DesignTimeRectangle="1, 31, 238, 31" ElementVisibilityArgument="Interactive" Guid="f3e91275-93b0-4a51-9b4d-41eb14eced40" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO4AAAAfCAYAAADgIPGeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMdSURBVHhe7ZnNcdswEEbVjj1OBSxCJ9+lBnRSAbpw1IFvOmRycAGuwUwnriIzyIAgyP0DCdpKoo2+w5uMCSy0BPcBILP5/v4r/PgZAACO2EBcAPwBcQFwCMQFwCEQFwCHQFwAHAJxAXAIxAXAIRAXAIdAXAAc4kvcyyk0TcN5fg0vst8f5yMcn5uwu8jr/z/tQcx/I+bBekZNE7bnDzFWmsPlfsDCjbipYE6hZdfjw5fX/gb3LS6T6+01bKm8UVy1mHZhpxbZ+53Da+BC3Jfz3iiGf8n9Fp0SNz+fQ5f+NsWNpDmbYu93Dq+BA3HTal3zgPtdORfQACuqiDjKsSLs206hzX3GOH6s2547VXT8CLkPx7fclgs2xfA2ybAzZagAw85mtpHFrY3/snujY+rf7uNK82FQFDfnUxRXtkHcr3D74vYFW3ccrhG3PZCx+rFJMSthI4O05Fou9qnourCT7aJALWk4STAqRXsmMoj4/l6JIDmnMX5coKY4GSP/tnKQWOKyeZ8Tlz1LiPsVbl9cqxDYrikKc0FcjigeQ5BxF56LkxgFWs4hUc5THjEzUbIpV/06YcTRvOSilbHmm6DElXM2F89+k59i5LME8/gQV4mT4cVbJ64uGC4u/y0txDQGE1ceZYW4Wjw9nt2n9KrAc9B5lnIc8jLuVfUx0F+VRd9FcbHjXoPbF1fIOde2KO4gV/EDiVHMWnwdl46pJEejQG0p7fE4pfs3clgrriVYhbiz91IaV+Vo5AeqcSCuLWTCOC6KfjRWty+La15ju6BRgKvFnbvHUrxx72vEvdZRWVKMlycHIz9QjQtxxy+jqiDEbmS9b9GPTULC/EFnVlzjg00+LuY4Ll0qyHVH5ek0QAt58eMUEX21uHkMFiPl0nxKXHXSiRj5gWqciJvQ71eyGESfQ6d2Wdqu/lvHFDcyLBzjO7EsOtq+D8fL+h23R74n0x04L0JW2yfFjcg5XRKpSlyaZ481p0Z+oBpX4gIAEhAXAIdAXAAcAnEBcAjEBcAhEBcAh0BcABwCcQFwCMQFwCGbh8en8PD4DQDgiN+tRTRqTLxSKgAAAABJRU5ErkJggg==" InformativeScreenshot="64c59864c7e57e12e76204f42d7d7a47.png" Reference="olP_1sCdA0ucfGnOEerWrQ/JaNzg4W2hUCyMHvKQe0xsg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Verification target" Mode="Disappears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="" ContentHash="t0Bde9aKqUu3fjaJZvnd2w" DesignTimeRectangle="2, 33, 231, 25" ElementVisibilityArgument="Interactive" Guid="3d5798d2-2ebb-4a57-b406-7d2d154dc19e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOcAAAAZCAYAAADKbDlJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALySURBVHhe7ZnNceMwDEbTl4rwKXe7AZ9cgC8ad5CbT3tIAenB20na4I5EUQI+gPrJbLLw6ju8yVgUaIjEI2nl5dfvlAgh8XjBC4SQGFBOQoJCOQkJCuUkJCiUk5CgUE5CgkI5CQnK88h5v6amaTSv7+kN7/t2PtPltUnHO17//2nPMP4NjIM3R02TDrdP6CuP4fJ9++Yp5MxFcU2tut5NMF77CfYtpxLo4z0dpKCdnGbBfKSjWUj3O4ZbCC/n2+3kTPi/ZL+FZeQs83N+5M+unB15zKbY/Y7hFoLLmVfdNZPY766lSAZU4XTAsUsVWt92TW25Z4zTR7DD7WEKSx/3TunyUdpKUeYY3YYMO0xBFvmwQ7ltYgFru7/q2WSf9rv7uNp4OFTlLPlU5cQ2yrmG2HL2Rbnu6LpGzvYs+ur7FgVrpOwYxBTXSkFPhfVIR2yHIvTE0GSJZOG3N1HwEN8/q5Cg5DTGj4vQFIcx+NnLAfHkVOM+J6eaS8q5hthyepOtdj8ovgU5NVAgjgTjbjoXhzhFWM8hU88Tj4OFTqQpV3v0d+JkXrgwFbzxFhg5cczm4tV36tMIziXJxJfTyFHQBbpOTlsUWk79Xbbopz6UnHjsBDmtXLY//57asV7nYPOs5Tjk5TyrucfBvq2Fexfl5M65hdhygoBzbYtyDgJVX0o4BWvltnH5SClydIrQF8/vT1N7fieHrXJ6Eq2Qc/ZZav2aHJ38iCG4nL50GedoB/fJWNu+LKd7Te1mTpFtlnPuGWvxzrNvkfNvHWuRajyeAJz8iCG8nOMbRzPpsKt4v3/kCx4QrbxEmZXTeUlSjnYlTouVi27bsXba1WWxLr4QEjJvlrP0oWJQIMuX5DQnlg4nP2J4Ajkz9vcOTjjcc36Y3VK2m3+JuHJ2DIvD+BsVC0u2n9Llvn3n7MHfrXInLQuN1/ZFOTtwTJdkWSWnzLPHG1MnP2J4GjkJ2RuUk5CgUE5CgkI5CQkK5SQkKJSTkKD8Aa+cpne5m6QmAAAAAElFTkSuQmCC" InformativeScreenshot="dbe748260a91b15d03a9eb2b5c25952e.png" Reference="olP_1sCdA0ucfGnOEerWrQ/oq0oE4F-g02v-QWrqJW62w" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="SendHotkey_9" Key="tab" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5f3e4826-4011-4352-9dba-ddd04dcbb287">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="SendHotkey_11" Key="tab" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5f3e4826-4011-4352-9dba-ddd04dcbb287">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="SendHotkey_12" Key="tab" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5f3e4826-4011-4352-9dba-ddd04dcbb287">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="SendHotkey_13" Key="tab" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5f3e4826-4011-4352-9dba-ddd04dcbb287">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="SendHotkey_14" Key="enter" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5f3e4826-4011-4352-9dba-ddd04dcbb287">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <Assign sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[relativePath]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[System.IO.Path.Combine(Environment.CurrentDirectory, "pdf")]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'dialog  Guardar como'" sap:VirtualizedContainerService.HintSize="416,191" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="l" KeyModifiers="Ctrl">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="58dc89c0-3d6d-4db9-a6f6-466f809d6354" InformativeScreenshot="e81e913c72f496ab2276fc6f6ad7ac6a" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;&lt;ctrl name='Guardar como' role='dialog' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Dirección Descargas'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,302" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Text="[relativePath]" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="" CVScreenId="2752dcba-8300-42c2-abe5-923a95021c4e" ContentHash="ZlDdy7azCUai9BMMeZ17xw" CvTextArea="235, 61, 66, 17" CvTextArgument="Imágenes" CvType="Text" DesignTimeRectangle="180, 38, 689, 62" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl idx='6' role='client' /&gt;" Guid="29d89bc3-7b9b-4b95-9e61-158d5a2d944d" InformativeScreenshot="d0fb9f500164056c46ad20130c6bec4e.png" Reference="olP_1sCdA0ucfGnOEerWrQ/IRABZgedNUqsPeoF3olC4w" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector, CV" SelectionStrategy="AA" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'dialog  Guardar como'" sap:VirtualizedContainerService.HintSize="416,191" sap2010:WorkflowViewState.IdRef="SendHotkey_20" Key="enter" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="02b6bd33-1a36-4091-9792-23a40d62412a" InformativeScreenshot="d6376faac51dad76e5cd010ecbf77fcd" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;&lt;ctrl name='Guardar como' role='dialog' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Receta de Fritos de atú…'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,302" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Text="Receta.pdf" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="" ContentHash="8mL4qeL_KkOv3sqQ1mQALQ" DesignTimeRectangle="169, 408, 752, 22" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="e9f2b0c3-9b67-4714-8d41-85880e993820" InformativeScreenshot="7cb4a165939da7f9d82352fae147d59c.png" Reference="olP_1sCdA0ucfGnOEerWrQ/oAMbwpMhl0aDevu7Eo733Q" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="Receta.pdf" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Guardar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable ContentHash="fvxNG4jFO0eg-TBrtWyXEw" DesignTimeRectangle="696, 540, 110, 33" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' /&gt;" Guid="0e029477-2b08-422d-8b57-95086b6543d0" InformativeScreenshot="65c7c264045924421d63d02633e15ec8.png" Reference="olP_1sCdA0ucfGnOEerWrQ/6ffPJWCnAkSQLnKrfm612g" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Sí'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NClick_22" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a12050d1-717a-4ae1-91f4-706915206d68" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="" CVScreenId="9b68a172-7dc2-4d45-a364-f1680cc22fa1" ContentHash="hRuUeBkBk0uXSOCpRKscfg" CvElementArea="253, 126, 87, 29" CvTextArea="289, 132, 15, 15" CvTextArgument="Sí" CvType="Button" DesignTimeRectangle="254, 127, 87, 29" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Confirmar Guardar como' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Sí' cls='Button' title='&amp;amp;Sí' /&gt;" Guid="bdbe5d4d-f843-44ef-bc98-b84093d7d9f3" InformativeScreenshot="3f4a7317df96e69acd186391becb4bb6.png" Reference="olP_1sCdA0ucfGnOEerWrQ/1mJ16q1Ldk6Mo9BrNNXrCQ" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Confirmar Guardar como' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, 1071, 1938, 1158" BrowserType="Chrome" ContentHash="kBitGwwF50Kc5-fEG4ftcA" IconBase64="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" InformativeScreenshot="1b49279a6e09ee9ce6e8f7c3a0cff19d.jpg" Reference="olP_1sCdA0ucfGnOEerWrQ/MzxzgQbt8kOqN_GEZ9c-1Q" Selector="&lt;html app='chrome.exe' /&gt;" Url="[path]" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="570,726" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="536,616" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="502,552" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="excel\Receta.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,252" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:SaveAsPdfX EndPage="{x:Null}" StartPage="{x:Null}" DestinationPdfPath="pdf\Receta_excel.pdf" DisplayName="Save Excel File As PDF" sap:VirtualizedContainerService.HintSize="434,188" sap2010:WorkflowViewState.IdRef="SaveAsPdfX_2" SaveQuality="StandardQuality" Workbook="[Excel]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+  </Sequence>
+</Activity>
